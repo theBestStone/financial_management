@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "sync:home": "node scripts/export-home-live.mjs",
+    "sync:assets": "node scripts/sync-local-assets.mjs",
     "lint": "oxlint",
     "preview": "vite preview"
   },

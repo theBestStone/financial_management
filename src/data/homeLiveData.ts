@@ -1,4 +1,5 @@
 import live from './homeLive.json';
+import { resolveLocalAsset } from '../utils/localAsset';
 import {
   articleDetailLink,
   articleListLink,
@@ -63,13 +64,10 @@ interface LivePeriodical {
   thumbImg: string;
 }
 
-/** 统一走 pcweb CDN（与 console 同源，开发代理已配置） */
+/** 解析为本地 /assets 绝对路径 */
 export function normalizeCdnUrl(url?: string): string {
   if (!url) return '';
-  return url
-    .replace('console.shanghuiyidisk.com', 'pcweb.shanghuiyidisk.com')
-    .replace(/%40h_1280/g, '')
-    .split('?')[0];
+  return resolveLocalAsset(url) ?? url.split('?')[0];
 }
 
 function formatDate(publishTime: string): string {
