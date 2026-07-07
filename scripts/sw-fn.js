@@ -1,0 +1,1 @@
+function sw(e){function t(w,b){return w<<b|w>>>32-b}function n(w,b){var C,S,x,E,T;return x=2147483648&w,E=2147483648&b,T=(1073741823&w)+(1073741823&b),(C=1073741824&w)&(S=1073741824&b)?2147483648^T^x^E:C|S?1073741824&T?3221225472^T^x^E:1073741824^T^x^E:T^x^E}

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { getCategoryPath } from '../../data/navigation';
+import { categoryLink } from '../../utils/legacyRoutes';
 
 interface BreadcrumbProps {
   categorySn?: number;
@@ -13,12 +14,12 @@ export default function Breadcrumb({ categorySn, currentTitle, parentTitle }: Br
   return (
     <div className="breadcrumb">
       <Link to="/">首页</Link>
-      {path.slice(1).map((item) => (
+      {path.slice(1).map((item, i) => (
         <span key={item.categorySn ?? item.categoryName}>
           {' '}
           &gt;{' '}
           {item.categorySn ? (
-            <Link to={`/article/${item.categorySn}`}>{item.categoryName}</Link>
+            <Link to={categoryLink(item.categorySn, path[i].categorySn)}>{item.categoryName}</Link>
           ) : (
             item.categoryName
           )}

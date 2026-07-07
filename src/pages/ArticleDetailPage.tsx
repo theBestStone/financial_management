@@ -1,11 +1,16 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import Breadcrumb from '../components/common/Breadcrumb';
 import { getArticleById, getRelatedArticles } from '../data/content';
+import { articleDetailLink } from '../utils/legacyRoutes';
 
-export default function ArticleDetailPage() {
+interface ArticleDetailPageProps {
+  overrideId?: number;
+}
+
+export default function ArticleDetailPage({ overrideId }: ArticleDetailPageProps = {}) {
   const { id: idParam } = useParams();
   const navigate = useNavigate();
-  const id = Number(idParam);
+  const id = overrideId ?? Number(idParam);
   const article = getArticleById(id);
 
   if (!article) {
@@ -51,7 +56,7 @@ export default function ArticleDetailPage() {
                     <span className="news-dot" />
                     <span
                       className="news-title"
-                      onClick={() => navigate(`/article/detail/${item.id}`)}
+                      onClick={() => navigate(articleDetailLink(item.id))}
                     >
                       {item.title}
                     </span>

@@ -1,0 +1,829 @@
+{
+  "fetchedAt": "2026-07-07T08:44:11.345Z",
+  "flipSpeed": 3,
+  "themeWidth": 1300,
+  "noticeBanner": {
+    "image": "https://console.shanghuiyidisk.com/shy/623/pc/home/20260414/6586639a66904aa0bd31e05b8b6cbe5f/%E4%B8%AD%E5%9B%BD%E8%B4%A2%E5%8A%A1%E7%AE%A1%E7%90%86%E6%95%99%E8%82%B2%E5%88%9B%E6%96%B0.png",
+    "link": "/article/13_1302_0_2290234.html?shId=624&siteId=357"
+  },
+  "carousel": [
+    {
+      "id": "2352421",
+      "categorySn": 84,
+      "categoryName": "时政·财经要闻",
+      "title": "庆祝中国共产党成立105周年大会在京隆重举行",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260702/91db64581bd94c5988c9d6e08511b5a4/1.png",
+      "publishTime": "2026-07-02 09:20:20",
+      "isNew": true,
+      "isTop": false
+    },
+    {
+      "id": "2351781",
+      "categorySn": 84,
+      "categoryName": "时政·财经要闻",
+      "title": "庆祝中国共产党成立105周年音乐会《人民至上》在京举行 习近平李强赵乐际王沪宁蔡奇丁薛祥李希韩正出席观看",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260702/6d174d5ace2f4824ba5c792a9e81f4ea/2.png",
+      "publishTime": "2026-06-30 11:56:05",
+      "isNew": true,
+      "isTop": false
+    },
+    {
+      "id": "2350483",
+      "categorySn": 84,
+      "categoryName": "时政·财经要闻",
+      "title": "习近平会见孟加拉国总理塔里克",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260629/7828d3c196bf43c8855755cda234a21e/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+      "publishTime": "2026-06-27 09:40:49",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2350541",
+      "categorySn": 84,
+      "categoryName": "时政·财经要闻",
+      "title": "习近平会见柬埔寨人民党主席、参议院主席洪森",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260629/957d7ab167cb41a6a430c6aabc0c4ed5/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+      "publishTime": "2026-06-27 11:42:32",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2344227",
+      "categorySn": 84,
+      "categoryName": "时政·财经要闻",
+      "title": "习近平在山东德州考察时强调 以扎实举措推进农业农村现代化 用勤劳和智慧创造更加美好生活",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260625/ea06306cf26e454d8506e4b3b1abca48/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+      "publishTime": "2026-06-25 09:02:56",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2333636",
+      "categorySn": 84,
+      "categoryName": "时政·财经要闻",
+      "title": "习近平：一体推进教育科技人才发展",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260616/7e154dcd56bb49af9ab7420b009d918c/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+      "publishTime": "2026-06-16 14:45:48",
+      "isNew": false,
+      "isTop": false
+    }
+  ],
+  "politics": [
+    {
+      "id": "2354902",
+      "categorySn": 84,
+      "categoryName": "时政·财经要闻",
+      "title": "总书记的人民情怀 | “建设社会主义现代化强国，关键在科技自立自强”",
+      "foreword": "",
+      "thumbImg": "",
+      "publishTime": "2026-07-07 10:24:55",
+      "isNew": true,
+      "isTop": false
+    },
+    {
+      "id": "2354539",
+      "categorySn": 84,
+      "categoryName": "时政·财经要闻",
+      "title": "国务院关于印发《美丽中国建设“十五五”规划》的通知",
+      "foreword": "",
+      "thumbImg": "",
+      "publishTime": "2026-07-06 09:56:52",
+      "isNew": true,
+      "isTop": false
+    },
+    {
+      "id": "2354156",
+      "categorySn": 84,
+      "categoryName": "时政·财经要闻",
+      "title": "【微观察·习近平总书记在庆祝中国共产党成立一百零五周年大会上发表重要讲话】“中国共产党为什么能的关键密码”",
+      "foreword": "",
+      "thumbImg": "",
+      "publishTime": "2026-07-03 10:28:33",
+      "isNew": true,
+      "isTop": false
+    },
+    {
+      "id": "2354153",
+      "categorySn": 84,
+      "categoryName": "时政·财经要闻",
+      "title": "失业保险稳岗扩岗政策举措延续实施",
+      "foreword": "",
+      "thumbImg": "",
+      "publishTime": "2026-07-03 10:27:51",
+      "isNew": true,
+      "isTop": false
+    },
+    {
+      "id": "2352421",
+      "categorySn": 84,
+      "categoryName": "时政·财经要闻",
+      "title": "庆祝中国共产党成立105周年大会在京隆重举行",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260702/91db64581bd94c5988c9d6e08511b5a4/1.png",
+      "publishTime": "2026-07-02 09:20:20",
+      "isNew": true,
+      "isTop": false
+    },
+    {
+      "id": "2354142",
+      "categorySn": 84,
+      "categoryName": "时政·财经要闻",
+      "title": "李强主持召开国务院常务会议 听取人工智能发展情况汇报等",
+      "foreword": "",
+      "thumbImg": "",
+      "publishTime": "2026-07-01 10:25:27",
+      "isNew": true,
+      "isTop": false
+    },
+    {
+      "id": "2351781",
+      "categorySn": 84,
+      "categoryName": "时政·财经要闻",
+      "title": "庆祝中国共产党成立105周年音乐会《人民至上》在京举行 习近平李强赵乐际王沪宁蔡奇丁薛祥李希韩正出席观看",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260702/6d174d5ace2f4824ba5c792a9e81f4ea/2.png",
+      "publishTime": "2026-06-30 11:56:05",
+      "isNew": true,
+      "isTop": false
+    },
+    {
+      "id": "2350411",
+      "categorySn": 84,
+      "categoryName": "时政·财经要闻",
+      "title": "图表：2026年前5个月全国规模以上工业企业利润增长18.8%",
+      "foreword": "",
+      "thumbImg": "",
+      "publishTime": "2026-06-29 09:39:52",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2350541",
+      "categorySn": 84,
+      "categoryName": "时政·财经要闻",
+      "title": "习近平会见柬埔寨人民党主席、参议院主席洪森",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260629/957d7ab167cb41a6a430c6aabc0c4ed5/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+      "publishTime": "2026-06-27 11:42:32",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2350483",
+      "categorySn": 84,
+      "categoryName": "时政·财经要闻",
+      "title": "习近平会见孟加拉国总理塔里克",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260629/7828d3c196bf43c8855755cda234a21e/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+      "publishTime": "2026-06-27 09:40:49",
+      "isNew": false,
+      "isTop": false
+    }
+  ],
+  "tabNews": [
+    {
+      "id": "2354260",
+      "categorySn": 1302,
+      "categoryName": "通知公告,工作动态",
+      "parentSn": 13,
+      "title": "中国亚洲经济发展协会会长权顺基接受纪律审查和监察调查",
+      "foreword": "",
+      "thumbImg": "",
+      "publishTime": "2026-07-03 13:04:37",
+      "isNew": true,
+      "isTop": false
+    },
+    {
+      "id": "2335578",
+      "categorySn": 1302,
+      "categoryName": "通知公告,协会动态,工作动态",
+      "parentSn": 13,
+      "title": "全国性行业协会商会领域违规违纪违法典型案例",
+      "foreword": "",
+      "thumbImg": "",
+      "publishTime": "2026-06-23 16:12:37",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2335300",
+      "categorySn": 1302,
+      "categoryName": "通知公告,协会动态,工作动态",
+      "parentSn": 13,
+      "title": "中央党的建设工作领导小组印发《关于学习贯彻习近平党建思想的通知》",
+      "foreword": "",
+      "thumbImg": "",
+      "publishTime": "2026-06-22 17:16:02",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2335299",
+      "categorySn": 1301,
+      "categoryName": "协会动态,工作动态",
+      "parentSn": 13,
+      "title": "习近平党建思想内涵要义",
+      "foreword": "",
+      "thumbImg": "",
+      "publishTime": "2026-06-22 17:14:53",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2335298",
+      "categorySn": 1301,
+      "categoryName": "协会动态,工作动态",
+      "parentSn": 13,
+      "title": "全国党建工作座谈会在京召开",
+      "foreword": "",
+      "thumbImg": "",
+      "publishTime": "2026-06-22 17:13:08",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2321796",
+      "categorySn": 1301,
+      "categoryName": "协会动态,工作动态",
+      "parentSn": 13,
+      "title": "第十联合党委督导组检查指导协会“树立和践行正确政绩观学习教育”开展情况",
+      "foreword": "",
+      "thumbImg": "",
+      "publishTime": "2026-06-03 14:37:49",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2321043",
+      "categorySn": 1301,
+      "categoryName": "协会动态,工作动态",
+      "parentSn": 13,
+      "title": "深学细悟强党性 笃行实干促规范",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260603/8ae98299a2c74c28bf6bcd9c260954c5/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+      "publishTime": "2026-06-03 10:15:09",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2320822",
+      "categorySn": 1302,
+      "categoryName": "通知公告",
+      "parentSn": 13,
+      "title": "2026年11月8日数据资产交易师职业能力水平统一考试报名公告",
+      "foreword": "",
+      "thumbImg": "https://static.xiehuiyi.com/xhy_assets/console/img/systemImage/newThumb/%E5%85%AC%E5%91%8A/%E5%85%AC%E5%91%8A-6.jpg",
+      "publishTime": "2026-06-02 13:57:34",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2320806",
+      "categorySn": 1302,
+      "categoryName": "通知公告",
+      "parentSn": 13,
+      "title": "2026年11月7日大数据会计职业能力水平统一考试报名公告",
+      "foreword": "",
+      "thumbImg": "https://static.xiehuiyi.com/xhy_assets/console/img/systemImage/newThumb/%E5%85%AC%E5%91%8A/%E5%85%AC%E5%91%8A-6.jpg",
+      "publishTime": "2026-06-02 13:33:42",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2320187",
+      "categorySn": 1302,
+      "categoryName": "通知公告",
+      "parentSn": 13,
+      "title": "中国国际跨国公司促进会常务副会长张笑宇接受纪律审查和监察调查",
+      "foreword": "",
+      "thumbImg": "https://static.xiehuiyi.com/xhy_assets/console/img/systemImage/newThumb/%E5%85%AC%E7%A4%BA/%E5%85%AC%E7%A4%BA-2.jpg",
+      "publishTime": "2026-05-29 20:54:07",
+      "isNew": false,
+      "isTop": false
+    }
+  ],
+  "photoReport": [
+    {
+      "id": "2321043",
+      "categorySn": 1301,
+      "categoryName": "协会动态,工作动态",
+      "parentSn": 13,
+      "title": "深学细悟强党性 笃行实干促规范",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260603/8ae98299a2c74c28bf6bcd9c260954c5/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+      "publishTime": "2026-06-03 10:15:09",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2314461",
+      "categorySn": 1301,
+      "categoryName": "协会动态",
+      "parentSn": 13,
+      "title": "中国财务管理60人智库首次专家座谈会圆满举行",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260515/c9c79981a10847928842a106d9c0eeff/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+      "publishTime": "2026-05-15 17:28:00",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2303748",
+      "categorySn": 1301,
+      "categoryName": "协会动态",
+      "parentSn": 13,
+      "title": "第十五期财务总监高级研修班在西南财经大学圆满举办",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260428/7b948dfba1f1480f94e14b4784a6332a/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+      "publishTime": "2026-04-28 14:34:04",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2308204",
+      "categorySn": 1301,
+      "categoryName": "协会动态",
+      "parentSn": 13,
+      "title": "中国企业财务管理协会第三届会员代表大会在京胜利召开",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260506/e09322aa99e3481ab6a64d4905da4911/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+      "publishTime": "2026-04-18 09:31:50",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2291995",
+      "categorySn": 1301,
+      "categoryName": "协会动态",
+      "parentSn": 13,
+      "title": "数智赋能 财领未来 —— 2026 年中国企业财务管理发展大会在京圆满举行",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260419/29b2a3aad3084d0cb23132ccc958d10e/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+      "publishTime": "2026-04-19 15:07:53",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2286861",
+      "categorySn": 1301,
+      "categoryName": "协会动态",
+      "parentSn": 13,
+      "title": "深化数智赋能，共筑融合生态",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260404/27ce0aed0da14a1bafaae2e672622d2f/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+      "publishTime": "2026-04-04 00:36:29",
+      "isNew": false,
+      "isTop": false
+    }
+  ],
+  "gallery": [
+    {
+      "id": "2320151",
+      "categorySn": 80,
+      "categoryName": "协会声音",
+      "title": "深耕合规管理 赋能数智转型 中财协专家助力商协会高质量发展",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260529/2cb034ee7f6f472d97060dea1947a0f0/3.jpg",
+      "publishTime": "2026-05-29 17:28:19",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2314952",
+      "categorySn": 80,
+      "categoryName": "协会声音",
+      "title": "中国财务管理60人智库首次专家座谈会圆满举行",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260518/76b5edb82e4b47dca0da1d761343102f/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+      "publishTime": "2026-05-18 10:54:47",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2267065",
+      "categorySn": 80,
+      "categoryName": "协会声音",
+      "title": "走进会员企业——中财协一行赴北京致远互联调研座谈",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260316/64cdf62d2f724167b503e4fab5030f0f/20260315%E8%B5%B0%E8%BF%9B%E4%BC%9A%E5%91%98%E4%BC%81%E4%B8%9A%E2%80%94%E2%80%94%E4%B8%AD%E8%B4%A2%E5%8D%8F%E4%B8%80%E8%A1%8C%E8%B5%B4%E5%8C%97%E4%BA%AC%E8%87%B4%E8%BF%9C%E4%BA%92%E8%81%94%E8%B0%83%E7%A0%94%E5%BA%A7%E8%B0%88-%E5%B0%81%E9%9D%A2.jpg",
+      "publishTime": "2026-03-16 19:40:27",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2264974",
+      "categorySn": 80,
+      "categoryName": "协会声音",
+      "title": "《全国企业财务管理高端人才管理办法》修订研讨会",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260306/afc4bf6c8b064740be65f8b6fcdd3460/%E5%B0%81%E9%9D%A2ppt-2025%E5%B9%B4%E5%BA%A6%E5%85%A8%E5%9B%BD%E8%B4%A2%E5%8A%A1%E7%AE%A1%E7%90%86%E9%AB%98%E7%AB%AF%E4%BA%BA%E6%89%8D%E8%AF%84%E5%AE%A1%E5%B7%A5%E4%BD%9C%E4%B8%93%E5%AE%B6%E7%A0%94%E8%AE%A8%E4%BC%9A_01.png",
+      "publishTime": "2026-03-03 20:07:53",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2229881",
+      "categorySn": 80,
+      "categoryName": "协会声音",
+      "title": "聚焦企业合规与标准建设 共话高质量发展新路径——2025企业家博鳌论坛企业合规建设与标准驱动高质量发展论坛成功举行",
+      "foreword": "\n\n",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20251205/19f7bdb3212549948e027a6fead914ab/20251203%E8%81%9A%E7%84%A6%E4%BC%81%E4%B8%9A%E5%90%88%E8%A7%84%E4%B8%8E%E6%A0%87%E5%87%86%E5%BB%BA%E8%AE%BE%20%E5%85%B1%E8%AF%9D%E9%AB%98%E8%B4%A8%E9%87%8F%E5%8F%91%E5%B1%95%E6%96%B0%E8%B7%AF%E5%BE%84-%E5%B0%81%E9%9D%A2.jpg",
+      "publishTime": "2025-12-03 09:15:16",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2228230",
+      "categorySn": 80,
+      "categoryName": "协会声音",
+      "title": "走进蚂蚁集团——中国企业财务管理协会会长张连起一行赴蚂蚁集团调研座谈",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20251201/9a0139e484744b98a60e08a81b4286a2/%E8%B5%B0%E8%BF%9B%E8%9A%82%E8%9A%81%E9%9B%86%E5%9B%A2_01.jpg",
+      "publishTime": "2025-11-28 14:23:36",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2221694",
+      "categorySn": 80,
+      "categoryName": "协会声音",
+      "title": "2025财资行业发展年会 共探数智化转型新路径",
+      "foreword": "\n\n",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20251112/f1da07308810493fad53ac0f79aa8138/20251108%202025%E8%B4%A2%E8%B5%84%E8%A1%8C%E4%B8%9A%E5%8F%91%E5%B1%95%E5%B9%B4%E4%BC%9A-%E5%B0%81%E9%9D%A2.jpg",
+      "publishTime": "2025-11-12 13:25:02",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2219080",
+      "categorySn": 80,
+      "categoryName": "协会声音",
+      "title": "英国IAB集团首席执行官Sarah Palmer与IAAP首席执行官Samantha Grant一行莅临协会进行交流会谈",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20251109/6bd2dbed0f4c44d38afd9e1bc1710ca6/20251107%E4%B8%AD%E8%8B%B1%E4%B8%A4%E4%BC%9A%E8%81%94%E5%90%88%E5%BC%80%E5%B1%95%E8%B4%A2%E5%8A%A1%E7%AE%A1%E7%90%86%E4%BA%BA%E5%91%98%E8%83%BD%E5%8A%9B%E9%AA%8C%E8%AF%81%E6%9A%A8%E5%85%B1%E5%BB%BA%E9%AB%98%E5%B1%82%E6%AC%A1%E5%9B%BD%E9%99%85%E4%BA%BA%E6%89%8D%E6%9C%8D%E5%8A%A1%E5%B9%B3%E5%8F%B0%E6%88%98%E7%95%A5%E5%90%88%E4%BD%9C%E7%AD%BE%E7%BA%A6%E4%BB%AA%E5%BC%8F-%E5%B0%81%E9%9D%A2.jpg",
+      "publishTime": "2025-11-07 12:00:00",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2210772",
+      "categorySn": 80,
+      "categoryName": "协会声音",
+      "title": "央视财经评论|全国政协常委、中财协会长张连起发表评论：加快高水平科技自立自强 引领发展新质生产力",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20251024/d9c68a61f3a548c38688699e88e809d2/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20251024120237_86_9.jpg",
+      "publishTime": "2025-10-24 11:50:23",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2208725",
+      "categorySn": 80,
+      "categoryName": "协会声音",
+      "title": "企业财务管理领域信用评价指标体系专家评审会",
+      "foreword": "",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20251021/19eca9373ad34c68802b9f8343c5e462/20251016%E4%BC%81%E4%B8%9A%E8%B4%A2%E5%8A%A1%E7%AE%A1%E7%90%86%E9%A2%86%E5%9F%9F%E4%BF%A1%E7%94%A8%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87%E4%BD%93%E7%B3%BB%E4%B8%93%E5%AE%B6%E8%AF%84%E5%AE%A1%E4%BC%9A-%E5%B0%81%E9%9D%A2.jpg",
+      "publishTime": "2025-10-21 10:04:33",
+      "isNew": false,
+      "isTop": false
+    }
+  ],
+  "standards": [
+    {
+      "id": "2264092",
+      "categorySn": 1302,
+      "categoryName": "通知公告,团体标准建设,标准发布",
+      "parentSn": 13,
+      "title": "关于发布《反洗钱师职业能力水平评价标准》团体标准的公告",
+      "foreword": "",
+      "thumbImg": "https://static.xiehuiyi.com/xhy_assets/console/img/systemImage/newThumb/%E9%80%9A%E7%9F%A5/%E9%80%9A%E7%9F%A5-3.jpg",
+      "publishTime": "2026-03-05 09:27:18",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2259273",
+      "categorySn": 1302,
+      "categoryName": "通知公告,团体标准建设,标准发布",
+      "parentSn": 13,
+      "title": "关于批准发布《企业数据资产管理规范》团体标准的公告",
+      "foreword": "",
+      "thumbImg": "https://static.xiehuiyi.com/xhy_assets/console/img/systemImage/newThumb/%E9%80%9A%E7%9F%A5/%E9%80%9A%E7%9F%A5-3.jpg",
+      "publishTime": "2026-02-11 14:43:14",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2256883",
+      "categorySn": 1301,
+      "categoryName": "协会动态,团体标准建设",
+      "parentSn": 13,
+      "title": "《企业数据资产管理规范》送审稿专家评审会在京顺利召开",
+      "foreword": "2026年1月28日，《企业数据资产管理规范》团体标准送审稿专家评审会在中财协会议室召开。《企业数据",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260130/b6ce054779964dbe918471ed638dce0f/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+      "publishTime": "2026-01-30 10:12:03",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2237245",
+      "categorySn": 1302,
+      "categoryName": "通知公告,团体标准建设,征求意见",
+      "parentSn": 13,
+      "title": "【通知】中国企业财务管理协会关于公开征求《企业数据资产管理规范》团体标准意见的通知",
+      "foreword": "附件：《企业数据资产管理规范》编制说明.pdf《企业数据资产管理规范》征求意见稿.pdf《企业数据资",
+      "thumbImg": "https://static.xiehuiyi.com/xhy_assets/console/img/systemImage/newThumb/%E9%80%9A%E7%9F%A5/%E9%80%9A%E7%9F%A5-3.jpg",
+      "publishTime": "2025-12-25 15:58:10",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2231507",
+      "categorySn": 1302,
+      "categoryName": "通知公告,团体标准建设,征求意见",
+      "parentSn": 13,
+      "title": "关于公开征求《反洗钱师职业能力水平评价标准》团体标准意见的通知",
+      "foreword": "附件1：中国企业财务管理协会关于公开征求《反洗钱师职业能力水平评价标准》团体标准意见的通知.pdf附",
+      "thumbImg": "https://static.xiehuiyi.com/xhy_assets/console/img/systemImage/newThumb/%E9%80%9A%E7%9F%A5/%E9%80%9A%E7%9F%A5-3.jpg",
+      "publishTime": "2025-12-12 09:17:58",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2223045",
+      "categorySn": 1302,
+      "categoryName": "通知公告,团体标准建设",
+      "parentSn": 13,
+      "title": "关于邀请参加《企业合规管理体系 建设与应用指南》团体标准参编单位的邀请函",
+      "foreword": "团体标准作为我国新型标准体系的重要组成，是市场主体自主制定、共同遵循的规范性文件，具有引导技术创新、",
+      "thumbImg": "https://static.xiehuiyi.com/xhy_assets/console/img/systemImage/newThumb/%E9%80%9A%E7%9F%A5/%E9%80%9A%E7%9F%A5-3.jpg",
+      "publishTime": "2025-11-17 17:22:02",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2212138",
+      "categorySn": 1302,
+      "categoryName": "通知公告,团体标准建设,标准立项",
+      "parentSn": 13,
+      "title": "关于《企业合规管理体系 建设与应用指南》团体标准立项公告",
+      "foreword": "",
+      "thumbImg": "https://static.xiehuiyi.com/xhy_assets/console/img/systemImage/newThumb/%E9%80%9A%E7%9F%A5/%E9%80%9A%E7%9F%A5-3.jpg",
+      "publishTime": "2025-10-30 12:07:03",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2212136",
+      "categorySn": 1301,
+      "categoryName": "协会动态,团体标准建设",
+      "parentSn": 13,
+      "title": "中国企业财务管理协会成功召开《企业合规管理体系 建设与应用指南》团体标准立项评审会",
+      "foreword": "2025年10月28日，中国企业财务管理协会在京组织召开了《企业合规管理体系 建设与应用指南》团体标",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20251030/119f2ae0f7ea48ce875c01f17b1d6784/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+      "publishTime": "2025-10-30 11:55:16",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2201556",
+      "categorySn": 1302,
+      "categoryName": "通知公告,团体标准建设",
+      "parentSn": 13,
+      "title": "关于征集《反洗钱师职业能力水平评价标准》团体标准参编单位的通知",
+      "foreword": "",
+      "thumbImg": "https://static.xiehuiyi.com/xhy_assets/console/img/systemImage/newThumb/%E9%80%9A%E7%9F%A5/%E9%80%9A%E7%9F%A5-3.jpg",
+      "publishTime": "2025-09-29 09:15:33",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "2200738",
+      "categorySn": 1302,
+      "categoryName": "通知公告,团体标准建设,标准立项",
+      "parentSn": 13,
+      "title": "关于《反洗钱师职业能力水平评价标准》团体标准立项公告",
+      "foreword": "",
+      "thumbImg": "https://static.xiehuiyi.com/xhy_assets/console/img/systemImage/newThumb/%E5%85%AC%E5%91%8A/%E5%85%AC%E5%91%8A-4.jpg",
+      "publishTime": "2025-09-26 10:30:39",
+      "isNew": false,
+      "isTop": false
+    }
+  ],
+  "activities": [
+    {
+      "id": "2272251",
+      "categorySn": 1302,
+      "categoryName": "通知公告, 会员活动",
+      "parentSn": 13,
+      "title": "【案例征集】关于组织申报第二届国有企业财务数智化创新成果的通知",
+      "foreword": "",
+      "thumbImg": "https://static.xiehuiyi.com/xhy_assets/console/img/systemImage/newThumb/%E9%80%9A%E7%9F%A5/%E9%80%9A%E7%9F%A5-3.jpg",
+      "publishTime": "2026-03-23 16:46:35",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "1615576",
+      "categorySn": 1354,
+      "categoryName": " 会员活动",
+      "parentSn": 13,
+      "title": "会员活动 | 赴“国投智能税软科技”参访交流",
+      "thumbImg": "https://cdn.xiehuiyi.com/shy/623/web/1302/1/648/e9AWQBjNr_.jpg",
+      "publishTime": "2024-05-13 15:54:02",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "1733050",
+      "categorySn": 1354,
+      "categoryName": " 会员活动",
+      "parentSn": 13,
+      "title": "会员单位赴中交财务共享中心交流学习",
+      "foreword": "5月10日上午，中国企业财务管理协会人管部副主任韩战棋、郭明带队15家会员单位前往中国交通建设股份有",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20241230/3fa760bc177140da9b33c5f22370af2d/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+      "publishTime": "2024-05-10 10:15:58",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "1615577",
+      "categorySn": 1354,
+      "categoryName": " 会员活动",
+      "parentSn": 13,
+      "title": "会员活动 | 走访中国交通建设股份有限公司北京财务共享中心",
+      "thumbImg": "https://cdn.xiehuiyi.com/shy/623/web/1302/1/644/3iaGwuBbw.jpg",
+      "publishTime": "2024-05-07 10:15:23",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "1733051",
+      "categorySn": 1354,
+      "categoryName": " 会员活动",
+      "parentSn": 13,
+      "title": "发挥国企资源优势 创新数字化财务管理 助力唐山经济高质量发展",
+      "foreword": "12月9日，由中国企业财务管理协会主办的第八届中国企业财务管理创新与发展论坛在京成功举办。论坛期间，",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20241230/0775e1dadc3e4541b9e6428fb5ce4882/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+      "publishTime": "2023-12-10 10:16:37",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "1733052",
+      "categorySn": 1354,
+      "categoryName": " 会员活动",
+      "parentSn": 13,
+      "title": "聚焦合规议题 第三届财税科技产业峰会在深圳召开",
+      "foreword": "2021年12月10日，协会理事单位会员深圳高灯计算机科技有限公司举办的第三届财税科技产业峰会（TT",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20241230/66fb343e0c0e4e9995ebfb1b715e1a1f/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+      "publishTime": "2021-12-22 10:18:03",
+      "isNew": false,
+      "isTop": false
+    },
+    {
+      "id": "1733053",
+      "categorySn": 1354,
+      "categoryName": " 会员活动",
+      "parentSn": 13,
+      "title": "中财协财务共享一体化专业委员会2021年半年度全体成员单位交流研讨会成功召开",
+      "foreword": " 7月9日，中国企业财务管理协会财务共享一体化专业委员会全体成员单位2021年半年度交流研讨会在京圆",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20241230/5a10424f161e4ea9b5276397b4141030/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+      "publishTime": "2021-07-16 10:19:03",
+      "isNew": false,
+      "isTop": false
+    }
+  ],
+  "serviceCenter": [
+    {
+      "logo": "https://console.shanghuiyidisk.com/shy/623/pc/08ff25d2081a4b57a20a316dbd8aa703_home.webp",
+      "text": "证书查询",
+      "url": "https://certificate.efmac.net/"
+    },
+    {
+      "logo": "https://console.shanghuiyidisk.com/shy/623/pc/d4be4d0102d7469698569de1e31252eb_home.png",
+      "text": "中财协数服平台",
+      "url": "/article/76_0_0_0.html?shId=623"
+    },
+    {
+      "logo": "https://console.shanghuiyidisk.com/shy/623/pc/32e867eb6242494e95337cd2c253a164_home.png",
+      "text": "企业数字化",
+      "url": "/article/82_8250_0_0.html?shId=623"
+    },
+    {
+      "logo": "https://console.shanghuiyidisk.com/shy/623/pc/bde976fca5674b219c92f73de81a3e82_home.png",
+      "text": "数据要素人才共同体",
+      "url": "/article/83_0_0_0.html?shId=623"
+    },
+    {
+      "logo": "https://console.shanghuiyidisk.com/shy/623/pc/e38b7329fab4441e9834aab202349277_home.webp",
+      "text": "五星人才评价",
+      "url": "http://talent.efmac.net/introduce"
+    },
+    {
+      "logo": "https://console.shanghuiyidisk.com/shy/623/pc/fdf343c8e4264ee78baa85553884ba63_home.webp",
+      "text": "人才库",
+      "url": "http://hr.efmac.net"
+    },
+    {
+      "logo": "https://console.shanghuiyidisk.com/shy/623/pc/d23ec52c867d44cdbd52fb75e78f898c_home.png",
+      "text": "人才培养平台",
+      "url": "http://www.cwrck.org/"
+    },
+    {
+      "logo": "https://console.shanghuiyidisk.com/shy/623/pc/bb3ba16ae3e9461e91db51b773896472_home.png",
+      "text": "考试平台",
+      "url": "http://www.cwrck.org/examNotice/intelligent"
+    },
+    {
+      "logo": "https://console.shanghuiyidisk.com/shy/623/pc/d81fbe90b0cb4cf498aa066f470540e2_home.png",
+      "text": "国际赋能",
+      "url": "/article/75_0_0_0.html?shId=623"
+    },
+    {
+      "logo": "https://console.shanghuiyidisk.com/shy/623/pc/3125d8cb703343978823bbf215ddaa1a_home.webp",
+      "text": "项目办公室",
+      "url": "http://deo.efmac.net"
+    },
+    {
+      "logo": "https://console.shanghuiyidisk.com/shy/623/pc/3970a228ab084271836f04f522a86980_home.jpg",
+      "text": "申请入会",
+      "url": "/mms?goto=joinMember"
+    }
+  ],
+  "periodicals": [
+    {
+      "id": "13428883548831744",
+      "title": "2026年6月刊",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/journal/list/20260629/dbecd661cc784b37bfe8772f1e13ef3f/pdf-cover.jpg",
+      "publishStatus": 1,
+      "publishTime": "2026-06-29 13:23:53",
+      "roleCode": 3,
+      "permission": "会员"
+    },
+    {
+      "id": "13192016328658944",
+      "title": "2026年5月刊",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/journal/list/20260518/155381b5de6f4441bebfa551064cbe6a/2026%E5%B9%B45%E6%9C%88%E5%B0%81%E9%9D%A2.png",
+      "publishStatus": 1,
+      "publishTime": "2026-05-18 19:02:00",
+      "roleCode": 3,
+      "permission": "会员"
+    }
+  ],
+  "memberPublicity": [
+    "中核工业集团",
+    "申能（集团）",
+    "国家开发投资集团有限公司",
+    "中国海洋石油集团有限公司",
+    "中国华电集团有限公司",
+    "中国太平洋保险(集团)股份有限公司",
+    "中国铝业集团",
+    "中国铁建股份有限公司",
+    "中国太平洋保险(集团)股份有限公司",
+    "国家开发投资集团有限公司",
+    "上海电气集团企业服务有限公司",
+    "国家石油天然气管网集团有限公司",
+    "中国煤炭科工集团有限公司",
+    "太平洋保险集团有限公司",
+    "中国储备粮管理集团有限公司"
+  ],
+  "enterpriseLogos": [
+    "https://console.shanghuiyidisk.com/shy/623/pc/574c675dcb95432385a7047b4d771814_home.webp",
+    "https://console.shanghuiyidisk.com/shy/623/pc/7b4a13b7f002443ab5ff628dd68ea5fd_home.webp",
+    "https://console.shanghuiyidisk.com/shy/623/pc/16a4980eaedc401c8bb7260e1733e179_home.jpeg",
+    "https://console.shanghuiyidisk.com/shy/623/pc/87f1c5c28a13408f9c240435c619648f_home.webp",
+    "https://console.shanghuiyidisk.com/shy/623/pc/e10a34f99e9f493f9905400a50e2bb0b_home.webp",
+    "https://console.shanghuiyidisk.com/shy/623/pc/b0793645363c483cbeff3e3c1d3cc44f_home.webp",
+    "https://console.shanghuiyidisk.com/shy/623/pc/a62047c0861e45f7a26100cfca89f8b2_home.webp",
+    "https://console.shanghuiyidisk.com/shy/623/pc/0b43023968464d258cab1b9ad2b107a2_home.jpeg",
+    "https://console.shanghuiyidisk.com/shy/623/pc/1c7c30fb50b0410b90cf586a3b4825bc_home.webp",
+    "https://console.shanghuiyidisk.com/shy/623/pc/2af780e183504ace9d373b0adca80366_home.webp",
+    "https://console.shanghuiyidisk.com/shy/623/pc/39fb7de019134d7bb1e7389c3f536c11_home.webp",
+    "https://console.shanghuiyidisk.com/shy/623/pc/5f233239405f458284663a7963698ff1_home.webp",
+    "https://console.shanghuiyidisk.com/shy/623/pc/12f4d253a1b5421690ac6ae86a4f53a7_home.webp",
+    "https://console.shanghuiyidisk.com/shy/623/pc/7a837b22d5e147b1b4c7d02c64b4d046_home.jpg%40h_1280",
+    "https://console.shanghuiyidisk.com/shy/623/pc/df875c0ae4d64010b63928dcf8ea4bb3_home.jpg",
+    "https://console.shanghuiyidisk.com/shy/623/pc/c91f30d7be9e4fad92ca55866eee0aca_home.webp",
+    "https://console.shanghuiyidisk.com/shy/623/pc/c3e6786ab577495bbacc84a2e1c76c54_home.webp",
+    "https://console.shanghuiyidisk.com/shy/623/pc/f12a748196db41e8972d47a7b2dcbde7_home.webp",
+    "https://console.shanghuiyidisk.com/shy/623/pc/c42510afce24491fbcfdc863d2c71e8b_home.webp",
+    "https://console.shanghuiyidisk.com/shy/623/pc/56cdc51597074a28a1dd4bca3aefadb7_home.jpg",
+    "https://console.shanghuiyidisk.com/shy/623/pc/fd830dce6e1e420e933f784293b9b1ad_home.jpeg",
+    "https://console.shanghuiyidisk.com/shy/623/pc/7e5f839359b043acbd8a76bfcc64e4af_home.webp",
+    "https://console.shanghuiyidisk.com/shy/623/pc/6dd6c8dff1c340dbb1cb5b064e531032_home.webp",
+    "https://console.shanghuiyidisk.com/shy/623/pc/fa23a7c4f0214a0ba45b640be4dc1338_home.jpg%40h_1280",
+    "https://console.shanghuiyidisk.com/shy/623/pc/1ee12ef5d0524ac998de0390206d99cc_home.jpg",
+    "https://console.shanghuiyidisk.com/shy/623/pc/06cb75da0b56416681ca23c314243f2e_home.jpg",
+    "https://console.shanghuiyidisk.com/shy/623/pc/874aa7ada8954ad1baaf0089c8e75f9f_home.jpg",
+    "https://console.shanghuiyidisk.com/shy/623/pc/a33164c85d7e4dbb812d381d24ed3db1_home.webp",
+    "https://console.shanghuiyidisk.com/shy/623/pc/ebfc1e6b72ec4dedb2fb3b3edbefbb25_home.jpg",
+    "https://console.shanghuiyidisk.com/shy/623/pc/da784dfa7364454680947799b9458bfa_home.jpg"
+  ]
+}

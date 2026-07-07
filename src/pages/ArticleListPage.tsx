@@ -2,15 +2,24 @@ import { useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Breadcrumb from '../components/common/Breadcrumb';
 import Pagination from '../components/common/Pagination';
-import { ARTICLES } from '../data/content';
+import { ARTICLES, getArticlesByCategory } from '../data/content';
 import { getCategoryPath, findNavByCategorySn } from '../data/navigation';
 import { paginate } from '../utils/helpers';
+import { articleDetailLink, categoryLink, navigateLink } from '../utils/legacyRoutes';
 
-export default function ArticleListPage() {
+interface ArticleListPageProps {
+  overrideCategorySn?: number;
+  overridePage?: number;
+}
+
+export default function ArticleListPage({
+  overrideCategorySn,
+  overridePage,
+}: ArticleListPageProps = {}) {
   const { categorySn: snParam } = useParams();
   const navigate = useNavigate();
-  const categorySn = Number(snParam);
-  const [page, setPage] = useState(1);
+  const categorySn = overrideCategorySn ?? Number(snParam);
+  const [page, setPage] = useState(overridePage ?? 1);
   const pageSize = 10;
 
   const navItem = findNavByCategorySn(categorySn);
@@ -18,6 +27,9 @@ export default function ArticleListPage() {
   const parentNav = path.length > 1 ? path[path.length - 2] : path[0];
 
   const articles = useMemo(() => {
+    const fromCategory = getArticlesByCategory(categorySn);
+    if (fromCategory.length > 0) return fromCategory;
+
     const direct = ARTICLES.filter((a) => a.categorySn === categorySn);
     if (direct.length > 0) return direct;
 
@@ -60,7 +72,7 @@ export default function ArticleListPage() {
                   onClick={() => {
                     if (item.categorySn) {
                       setPage(1);
-                      navigate(`/article/${item.categorySn}`);
+                      navigateLink(categoryLink(item.categorySn, parentNav?.categorySn), navigate);
                     }
                   }}
                 >
@@ -79,7 +91,7 @@ export default function ArticleListPage() {
                 <div key={article.id} className="article-list-item">
                   <span
                     className="article-list-title"
-                    onClick={() => navigate(`/article/detail/${article.id}`)}
+                    onClick={() => navigateLink(articleDetailLink(article.id), navigate)}
                   >
                     {article.title}
                   </span>

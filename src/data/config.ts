@@ -1,9 +1,11 @@
+import { EFMAC_ASSETS } from './officialAssets';
+
 export const SITE_CONFIG = {
   name: '中国企业财务管理协会',
   shortName: '中财协',
-  logo: '/assets/logo.png',
-  headerBg: '/assets/header.svg',
-  pageBg: '/assets/page-bg.png',
+  logo: EFMAC_ASSETS.logo,
+  headerBg: EFMAC_ASSETS.headerBg,
+  pageBg: EFMAC_ASSETS.pageBg,
   themeColor: '#005AAA',
   themeHover: '#b72e2e',
   themeDark: '#004488',
@@ -13,12 +15,12 @@ export const SITE_CONFIG = {
   email: 'zcx@efmac.net',
   address: '北京市海淀区西三环北路87号国际财经中心D座10层1001室',
   icp: '京ICP备16015800号-2',
-  floatImage: '/assets/qr-service.jpg',
+  floatImage: EFMAC_ASSETS.floatParty,
   qrCodes: {
-    mina: { title: '小程序', image: '/assets/qr-mina.png' },
-    service: { title: '服务号', image: '/assets/qr-service.jpg' },
-    subscription: { title: '订阅号', image: '/assets/qr-sub.jpeg' },
-    tiktok: { title: '抖音号', image: '/assets/qr-tiktok.jpeg' },
+    mina: { title: '小程序', image: EFMAC_ASSETS.qr.mina },
+    service: { title: '服务号', image: EFMAC_ASSETS.qr.service },
+    subscription: { title: '订阅号', image: EFMAC_ASSETS.qr.subscription },
+    tiktok: { title: '抖音号', image: EFMAC_ASSETS.qr.tiktok },
   },
 };
 

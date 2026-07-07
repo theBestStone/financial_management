@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { searchArticles } from '../../data/content';
+import { articleDetailLink, navigateLink } from '../../utils/legacyRoutes';
 
 interface SearchModalProps {
   open: boolean;
@@ -29,7 +30,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
   const results = keyword.trim() ? searchArticles(keyword.trim()) : [];
 
   const handleResultClick = (id: number) => {
-    navigate(`/article/detail/${id}`);
+    navigateLink(articleDetailLink(id), navigate);
     onClose();
   };
 

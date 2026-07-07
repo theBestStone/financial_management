@@ -119,9 +119,9 @@ export const NAV_LIST: NavItem[] = [
     children: [
       { categoryName: '会员发展和服务办法', categorySn: 7255 },
       { categoryName: '会员权益', categorySn: 7253 },
-      { categoryName: '申请入会', categorySn: 16000, linkUrl: '/member/apply' },
-      { categoryName: '会员查询', categorySn: 16001, linkUrl: '/member/query' },
-      { categoryName: '会员单位名录', categorySn: 16002, linkUrl: '/member/companies' },
+      { categoryName: '申请入会', linkUrl: '/article/16_0_0_0.html?shId=623' },
+      { categoryName: '会员查询', linkUrl: '/subject/16_2_0_2351?shId=623' },
+      { categoryName: '会员单位名录', linkUrl: '/companyJob/1_0_0_0.html' },
     ],
   },
   {

@@ -1,20 +1,26 @@
-import { useNavigate } from 'react-router-dom';
-import { PHOTO_REPORT } from '../../data/homeData';
+import { useState } from 'react';
+import {
+  PHOTO_LEADERSHIP_SLIDES,
+  PHOTO_REPORT_SLIDES,
+  PHOTO_REPORT_TABS,
+} from '../../data/homeData';
+import HomeSectionHeader from './HomeSectionHeader';
+import MiniCarousel from './MiniCarousel';
 
 export default function PhotoReportPanel() {
-  const navigate = useNavigate();
+  const [activeTab, setActiveTab] = useState(PHOTO_REPORT_TABS[0].key);
+  const slides =
+    activeTab === 'leadership' ? PHOTO_LEADERSHIP_SLIDES : PHOTO_REPORT_SLIDES;
 
   return (
-    <div className="home-panel home-panel-fill">
-      <div className="home-panel-header">
-        <div className="home-panel-title">{PHOTO_REPORT.title}</div>
-        <span className="home-panel-more" onClick={() => navigate(PHOTO_REPORT.link)}>
-          更多
-        </span>
-      </div>
-      <div className="photo-report-image-wrap" onClick={() => navigate(PHOTO_REPORT.link)}>
-        <img src={PHOTO_REPORT.image} alt={PHOTO_REPORT.title} />
-      </div>
+    <div className="home-panel home-panel-fill photo-report-panel">
+      <HomeSectionHeader
+        tabs={PHOTO_REPORT_TABS}
+        activeKey={activeTab}
+        onTabChange={setActiveTab}
+        mode="inline"
+      />
+      <MiniCarousel key={activeTab} slides={slides} className="photo-report-carousel" />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { NAV_LIST } from '../../data/navigation';
 import { SITE_CONFIG, FRIENDLY_LINKS } from '../../data/config';
 import { getNavLink, isExternalLink } from '../../utils/helpers';
+import EfmacImage from '../common/EfmacImage';
 
 export default function Footer() {
   return (
@@ -42,7 +43,7 @@ export default function Footer() {
               {Object.values(SITE_CONFIG.qrCodes).map((qr) => (
                 <div className="footer-code-item" key={qr.title}>
                   <p className="footer-code-tit">{qr.title}</p>
-                  <img src={qr.image} alt={qr.title} />
+                  <EfmacImage src={qr.image} alt={qr.title} />
                 </div>
               ))}
             </div>
@@ -72,17 +73,18 @@ export default function Footer() {
 
 export function FriendlyLinksSection() {
   return (
-    <div className="module-box">
-      <div className="module-title">
-        <span>友情链接</span>
-      </div>
-      <div className="friendly-links">
-        {FRIENDLY_LINKS.map((link) => (
-          <a key={link.name} href={link.url} target="_blank" rel="noreferrer">
-            {link.name}
-          </a>
+    <section className="friendly-links-module" aria-label="友情链接">
+      <div className="friendly-links-head">友情链接</div>
+      <div className="friendly-links-body">
+        {FRIENDLY_LINKS.map((link, index) => (
+          <span key={link.name} className="friendly-links-entry">
+            {index > 0 && <span className="friendly-links-sep" aria-hidden="true">|</span>}
+            <a href={link.url} target="_blank" rel="noreferrer">
+              {link.name}
+            </a>
+          </span>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

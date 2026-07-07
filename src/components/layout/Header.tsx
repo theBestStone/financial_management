@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
+import EfmacImage from '../common/EfmacImage';
 import { SITE_CONFIG } from '../../data/config';
+import { memberApplyLink } from '../../utils/legacyRoutes';
 
 interface HeaderProps {
   onSearchClick: () => void;
@@ -21,7 +23,7 @@ export default function Header({ onSearchClick, onLoginClick }: HeaderProps) {
       <div className="nav-top-wrap">
         <div className="nav-top-sizer" aria-hidden="true" />
         <div className="top-bg-img">
-          <img src={SITE_CONFIG.headerBg} alt={SITE_CONFIG.name} />
+          <EfmacImage src={SITE_CONFIG.headerBg} alt={SITE_CONFIG.name} />
         </div>
         <div className="nav-top-overlay">
           <div className="header-brand-spacer" />
@@ -33,7 +35,7 @@ export default function Header({ onSearchClick, onLoginClick }: HeaderProps) {
             <button type="button" className="header-btn" onClick={onLoginClick}>
               登录
             </button>
-            <Link to="/member/apply" className="header-btn">
+            <Link to={memberApplyLink()} className="header-btn">
               申请入会
             </Link>
           </div>

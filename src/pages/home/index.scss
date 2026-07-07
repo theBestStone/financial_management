@@ -1,0 +1,11 @@
+.home-main {
+    width: 1300px;
+    margin: 0 auto;
+    .friendly-links-entry {
+        white-space: nowrap;
+    }
+    .friendly-links-body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

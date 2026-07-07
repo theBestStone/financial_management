@@ -5,22 +5,24 @@ import {
   ASSOCIATION_NEWS,
   STANDARD_NEWS,
 } from './homeData';
+import { getLiveArticleById } from './homeLiveData';
+import { EFMAC_ASSETS } from './officialAssets';
 
 export const BANNERS: BannerItem[] = [
   {
     id: 1,
     title: '中国企业财务管理协会',
-    image: 'https://pcweb.shanghuiyidisk.com/shy/623/new/expand/20250429/7fd15466e6cb4b5d81a439a5ac5aef4f/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg',
+    image: EFMAC_ASSETS.expand.b,
   },
   {
     id: 2,
     title: '财务管理人员能力验证工作全面推进',
-    image: 'https://pcweb.shanghuiyidisk.com/shy/0/pcweb/banner/banner_04.jpg',
+    image: EFMAC_ASSETS.banner04,
   },
   {
     id: 3,
     title: '团体标准建设',
-    image: 'https://pcweb.shanghuiyidisk.com/shy/623/pc/293acc8a4ca34d86a6cd27f7fdb17165_home.png',
+    image: EFMAC_ASSETS.pageBg,
   },
 ];
 
@@ -218,6 +220,19 @@ export const ARTICLES: Article[] = [
     views: 980,
   },
   {
+    id: 7751,
+    title: '关于开展新时代中国式大财务管理教育创新基金课题研究通知',
+    summary: '面向会员单位及相关机构开展新时代中国式大财务管理教育创新基金课题研究。',
+    content: articleContent(
+      '关于开展新时代中国式大财务管理教育创新基金课题研究通知',
+      '为深入贯彻落实新时代财务管理教育创新要求，中国企业财务管理协会现开展新时代中国式大财务管理教育创新基金课题研究，欢迎各会员单位、高等院校及相关机构积极申报。'
+    ),
+    categorySn: 7751,
+    categoryName: '工作动态',
+    publishTime: '2025-06-01',
+    views: 1560,
+  },
+  {
     id: 1014,
     title: '标准化委员会成立公告',
     summary: '为进一步推进团体标准建设，协会成立标准化委员会。',
@@ -312,7 +327,34 @@ export const CERTIFICATE_RECORDS: CertificateRecord[] = [
 ];
 
 export function getArticlesByCategory(categorySn: number): Article[] {
-  return ARTICLES.filter((a) => a.categorySn === categorySn);
+  const direct = ARTICLES.filter((a) => a.categorySn === categorySn);
+  const homeMapped = getHomeArticlesForCategory(categorySn);
+  const ids = new Set(direct.map((a) => a.id));
+  return [...direct, ...homeMapped.filter((a) => !ids.has(a.id))];
+}
+
+function getHomeArticlesForCategory(categorySn: number): Article[] {
+  const mapItems = (items: typeof POLITICS_NEWS, sn: number, name: string): Article[] =>
+    items.map((item) => ({
+      id: item.id,
+      title: item.title,
+      content: articleContent(item.title, item.title),
+      categorySn: sn,
+      categoryName: name,
+      publishTime: item.date,
+      views: 800 + (item.id % 500),
+    }));
+
+  if (categorySn === 1301) return mapItems(ASSOCIATION_NEWS, 1301, '协会动态');
+  if (categorySn === 1302) return mapItems(NOTICE_NEWS, 1302, '通知公告');
+  if (categorySn === 705750) return mapItems(STANDARD_NEWS, 705750, '标准立项');
+  if (categorySn === 13) {
+    return [
+      ...mapItems(ASSOCIATION_NEWS, 1301, '协会动态'),
+      ...mapItems(NOTICE_NEWS, 1302, '通知公告'),
+    ];
+  }
+  return [];
 }
 
 export function getArticleById(id: number): Article | undefined {
@@ -321,16 +363,30 @@ export function getArticleById(id: number): Article | undefined {
 
   const homeItems = [...POLITICS_NEWS, ...NOTICE_NEWS, ...ASSOCIATION_NEWS, ...STANDARD_NEWS];
   const homeItem = homeItems.find((item) => item.id === id);
-  if (!homeItem) return undefined;
+  if (homeItem) {
+    return {
+      id: homeItem.id,
+      title: homeItem.title,
+      content: articleContent(homeItem.title, homeItem.title),
+      categorySn: homeItem.id >= 3000000 ? 1302 : 1301,
+      categoryName: '协会动态',
+      publishTime: homeItem.date,
+      views: Math.floor(Math.random() * 3000) + 500,
+    };
+  }
+
+  const live = getLiveArticleById(id);
+  if (!live) return undefined;
 
   return {
-    id: homeItem.id,
-    title: homeItem.title,
-    content: articleContent(homeItem.title, homeItem.title),
-    categorySn: id >= 3000 && id < 4000 ? 1302 : id >= 4000 ? 1301 : id >= 5000 ? 705750 : 1301,
-    categoryName: id >= 3000 && id < 4000 ? '通知公告' : id >= 4000 ? '协会动态' : id >= 5000 ? '团体标准建设' : '时政·财经要闻',
-    publishTime: homeItem.date,
+    id: Number(live.id),
+    title: live.title,
+    content: articleContent(live.title, live.foreword || live.title),
+    categorySn: live.categorySn ?? 1301,
+    categoryName: live.categoryName?.split(',')[0] ?? '协会动态',
+    publishTime: live.publishTime.slice(0, 10),
     views: Math.floor(Math.random() * 3000) + 500,
+    thumb: live.thumbImg,
   };
 }
 

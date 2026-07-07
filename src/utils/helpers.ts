@@ -1,7 +1,8 @@
 import type { NavItem } from '../types';
+import { categoryLink } from './legacyRoutes';
 
 export function getNavLink(item: NavItem): string {
-  if (item.linkUrl) return item.linkUrl;
+  if (item.linkUrl) return item.linkUrl.split('?')[0];
   if (item.categorySn === -1) return '/';
 
   const getFirstLeaf = (nav: NavItem): NavItem => {
@@ -13,11 +14,11 @@ export function getNavLink(item: NavItem): string {
 
   if (item.children && item.children.length > 0) {
     const leaf = getFirstLeaf(item);
-    if (leaf.linkUrl) return leaf.linkUrl;
-    if (leaf.categorySn !== undefined) return `/article/${leaf.categorySn}`;
+    if (leaf.linkUrl) return leaf.linkUrl.split('?')[0];
+    if (leaf.categorySn !== undefined) return categoryLink(leaf.categorySn, item.categorySn);
   }
 
-  if (item.categorySn !== undefined) return `/article/${item.categorySn}`;
+  if (item.categorySn !== undefined) return categoryLink(item.categorySn);
   return '/';
 }
 

@@ -7,6 +7,7 @@ import FloatSidebar from './FloatSidebar';
 import SearchModal from '../common/SearchModal';
 import LoginModal from '../common/LoginModal';
 import { SITE_CONFIG } from '../../data/config';
+import { efmacBgUrl } from '../../utils/efmacMedia';
 
 export default function Layout() {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -15,7 +16,7 @@ export default function Layout() {
   return (
     <div
       className="page-wrap"
-      style={{ backgroundImage: `url(${SITE_CONFIG.pageBg})` }}
+      style={{ backgroundImage: efmacBgUrl(SITE_CONFIG.pageBg) }}
     >
       <div className="site-header-block">
         <Header

@@ -1,0 +1,136 @@
+{
+  "data": {
+    "total": 491,
+    "size": "10",
+    "current": "1",
+    "orders": [],
+    "optimizeCountSql": true,
+    "searchCount": true,
+    "list": [
+      {
+        "id": "2354260",
+        "categorySn": 1302,
+        "categoryName": "通知公告",
+        "parentSn": 13,
+        "title": "中国亚洲经济发展协会会长权顺基接受纪律审查和监察调查",
+        "foreword": "",
+        "thumbImg": "",
+        "publishTime": "2026-07-03 13:04:37",
+        "isNew": true,
+        "isTop": false
+      },
+      {
+        "id": "2335578",
+        "categorySn": 1301,
+        "categoryName": "协会动态,通知公告",
+        "parentSn": 13,
+        "title": "全国性行业协会商会领域违规违纪违法典型案例",
+        "foreword": "",
+        "thumbImg": "",
+        "publishTime": "2026-06-23 16:12:37",
+        "isNew": false,
+        "isTop": false
+      },
+      {
+        "id": "2335300",
+        "categorySn": 1301,
+        "categoryName": "协会动态,通知公告",
+        "parentSn": 13,
+        "title": "中央党的建设工作领导小组印发《关于学习贯彻习近平党建思想的通知》",
+        "foreword": "",
+        "thumbImg": "",
+        "publishTime": "2026-06-22 17:16:02",
+        "isNew": false,
+        "isTop": false
+      },
+      {
+        "id": "2335299",
+        "categorySn": 1301,
+        "categoryName": "协会动态",
+        "parentSn": 13,
+        "title": "习近平党建思想内涵要义",
+        "foreword": "",
+        "thumbImg": "",
+        "publishTime": "2026-06-22 17:14:53",
+        "isNew": false,
+        "isTop": false
+      },
+      {
+        "id": "2335298",
+        "categorySn": 1301,
+        "categoryName": "协会动态",
+        "parentSn": 13,
+        "title": "全国党建工作座谈会在京召开",
+        "foreword": "",
+        "thumbImg": "",
+        "publishTime": "2026-06-22 17:13:08",
+        "isNew": false,
+        "isTop": false
+      },
+      {
+        "id": "2321796",
+        "categorySn": 1301,
+        "categoryName": "协会动态",
+        "parentSn": 13,
+        "title": "第十联合党委督导组检查指导协会“树立和践行正确政绩观学习教育”开展情况",
+        "foreword": "",
+        "thumbImg": "",
+        "publishTime": "2026-06-03 14:37:49",
+        "isNew": false,
+        "isTop": false
+      },
+      {
+        "id": "2321043",
+        "categorySn": 1301,
+        "categoryName": "协会动态",
+        "parentSn": 13,
+        "title": "深学细悟强党性 笃行实干促规范",
+        "foreword": "",
+        "thumbImg": "https://console.shanghuiyidisk.com/shy/623/new/expand/20260603/8ae98299a2c74c28bf6bcd9c260954c5/%E9%A3%8E%E9%87%87%E5%9B%BE.jpeg",
+        "publishTime": "2026-06-03 10:15:09",
+        "isNew": false,
+        "isTop": false
+      },
+      {
+        "id": "2320822",
+        "categorySn": 1302,
+        "categoryName": "通知公告",
+        "parentSn": 13,
+        "title": "2026年11月8日数据资产交易师职业能力水平统一考试报名公告",
+        "foreword": "",
+        "thumbImg": "https://static.xiehuiyi.com/xhy_assets/console/img/systemImage/newThumb/%E5%85%AC%E5%91%8A/%E5%85%AC%E5%91%8A-6.jpg",
+        "publishTime": "2026-06-02 13:57:34",
+        "isNew": false,
+        "isTop": false
+      },
+      {
+        "id": "2320806",
+        "categorySn": 1302,
+        "categoryName": "通知公告",
+        "parentSn": 13,
+        "title": "2026年11月7日大数据会计职业能力水平统一考试报名公告",
+        "foreword": "",
+        "thumbImg": "https://static.xiehuiyi.com/xhy_assets/console/img/systemImage/newThumb/%E5%85%AC%E5%91%8A/%E5%85%AC%E5%91%8A-6.jpg",
+        "publishTime": "2026-06-02 13:33:42",
+        "isNew": false,
+        "isTop": false
+      },
+      {
+        "id": "2320187",
+        "categorySn": 1302,
+        "categoryName": "通知公告",
+        "parentSn": 13,
+        "title": "中国国际跨国公司促进会常务副会长张笑宇接受纪律审查和监察调查",
+        "foreword": "",
+        "thumbImg": "https://static.xiehuiyi.com/xhy_assets/console/img/systemImage/newThumb/%E5%85%AC%E7%A4%BA/%E5%85%AC%E7%A4%BA-2.jpg",
+        "publishTime": "2026-05-29 20:54:07",
+        "isNew": false,
+        "isTop": false
+      }
+    ],
+    "count": 491,
+    "pages": "50"
+  },
+  "errmsg": "成功",
+  "errno": 0
+}
