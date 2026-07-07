@@ -19,4 +19,19 @@ export default defineConfig({
       },
     },
   },
+  preview: {
+    proxy: {
+      '/pcweb-cdn': {
+        target: 'https://pcweb.shanghuiyidisk.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/pcweb-cdn/, ''),
+        configure: (proxy) => {
+          proxy.on('proxyReq', (proxyReq) => {
+            proxyReq.setHeader('Referer', 'https://www.efmac.net/');
+            proxyReq.setHeader('Origin', 'https://www.efmac.net');
+          });
+        },
+      },
+    },
+  },
 });

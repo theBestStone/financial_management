@@ -9,7 +9,6 @@ export default function EfmacImage({ src, alt = '', ...rest }: EfmacImageProps) 
     <img
       src={resolveEfmacImageSrc(src)}
       alt={alt}
-      referrerPolicy="no-referrer"
       loading="lazy"
       data-efmac-origin={EFMAC_SITE_ORIGIN}
       {...rest}
