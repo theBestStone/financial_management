@@ -22,19 +22,23 @@ export default function ServiceCenter() {
 
   return (
     <section className="service-center-module" aria-label="服务中心">
-      <div className="service-center-head">服务中心</div>
-      <div className="service-center-grid">
-        {SERVICE_CENTER_MAIN.map(renderCell)}
-        <button
-          type="button"
-          className="service-center-cell service-center-cell--apply"
-          onClick={() => navigateLink(SERVICE_CENTER_APPLY.link, navigate)}
-        >
-          {SERVICE_CENTER_APPLY.logo ? (
-            <EfmacImage className="service-center-logo" src={SERVICE_CENTER_APPLY.logo} alt="" />
-          ) : null}
-          <span className="service-center-label">{SERVICE_CENTER_APPLY.title}</span>
-        </button>
+      <div className="service-center-header">
+        <div className="service-center-head">服务中心</div>
+      </div>
+      <div className="service-center-body">
+        <div className="service-center-grid">
+          {SERVICE_CENTER_MAIN.map(renderCell)}
+          <button
+            type="button"
+            className="service-center-cell service-center-cell--apply"
+            onClick={() => navigateLink(SERVICE_CENTER_APPLY.link, navigate)}
+          >
+            {SERVICE_CENTER_APPLY.logo ? (
+              <EfmacImage className="service-center-logo" src={SERVICE_CENTER_APPLY.logo} alt="" />
+            ) : null}
+            <span className="service-center-label">{SERVICE_CENTER_APPLY.title}</span>
+          </button>
+        </div>
       </div>
     </section>
   );

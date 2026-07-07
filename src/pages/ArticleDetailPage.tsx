@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from 'react-router-dom';
+import ArticleBody from '../components/common/ArticleBody';
 import Breadcrumb from '../components/common/Breadcrumb';
-import { getArticleById, getRelatedArticles } from '../data/content';
+import { getRelatedFromCache, useArticleDetail } from '../hooks/useEfmacArticles';
 import { articleDetailLink } from '../utils/legacyRoutes';
 
 interface ArticleDetailPageProps {
@@ -11,7 +12,17 @@ export default function ArticleDetailPage({ overrideId }: ArticleDetailPageProps
   const { id: idParam } = useParams();
   const navigate = useNavigate();
   const id = overrideId ?? Number(idParam);
-  const article = getArticleById(id);
+  const { article, loading } = useArticleDetail(id);
+
+  if (loading && !article) {
+    return (
+      <div className="wrap">
+        <div className="alert alert-info" style={{ marginTop: 30 }}>
+          加载中…
+        </div>
+      </div>
+    );
+  }
 
   if (!article) {
     return (
@@ -23,7 +34,7 @@ export default function ArticleDetailPage({ overrideId }: ArticleDetailPageProps
     );
   }
 
-  const related = getRelatedArticles(article);
+  const related = getRelatedFromCache(article.categorySn, article.id);
 
   return (
     <div className="wrap">
@@ -39,10 +50,7 @@ export default function ArticleDetailPage({ overrideId }: ArticleDetailPageProps
               {article.author && <span>来源：{article.author}</span>}
               {article.views !== undefined && <span>浏览：{article.views}</span>}
             </div>
-            <div
-              className="article-body"
-              dangerouslySetInnerHTML={{ __html: article.content }}
-            />
+            <ArticleBody article={article} />
           </article>
 
           {related.length > 0 && (

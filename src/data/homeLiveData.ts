@@ -4,6 +4,7 @@ import {
   articleDetailLink,
   articleListLink,
   memberApplyLink,
+  SH_ID,
 } from '../utils/legacyRoutes';
 
 export interface HomeNewsItem {
@@ -197,11 +198,15 @@ export const STANDARD_NEWS: HomeNewsItem[] = (data.standards ?? []).map(mapArtic
 
 export const MEMBER_ACTIVITIES: HomeNewsItem[] = (data.activities ?? []).map(mapArticle);
 
-export const MAGAZINE_COVERS = (data.periodicals ?? []).slice(0, 2).map((item) => ({
-  id: Number(item.id),
+export const STANDARD_MORE_LINK = articleListLink(13, 1353);
+export const MEMBER_ACTIVITIES_MORE_LINK = articleListLink(13, 1354);
+export const MAGAZINE_MORE_LINK = `https://www.efmac.net/journal/list?shId=${SH_ID}`;
+
+export const MAGAZINE_COVERS = (data.periodicals ?? []).map((item) => ({
+  id: Number(item.id) || item.id,
   title: item.title,
   image: normalizeCdnUrl(item.thumbImg),
-  link: articleListLink(13, 1301),
+  link: `https://www.efmac.net/journal/detail/${item.id}?shId=${SH_ID}`,
 }));
 
 export const MEMBER_PUBLICITY_NAMES = data.memberPublicity ?? [];

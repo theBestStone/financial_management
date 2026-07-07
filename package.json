@@ -7,17 +7,21 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "sync:home": "node scripts/export-home-live.mjs",
+    "sync:articles": "node scripts/sync-articles.mjs",
+    "sync:all": "node scripts/export-home-live.mjs && node scripts/sync-articles.mjs && node scripts/sync-local-assets.mjs",
     "sync:assets": "node scripts/sync-local-assets.mjs",
     "lint": "oxlint",
     "preview": "vite preview"
   },
   "dependencies": {
+    "crypto-js": "^4.2.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-router-dom": "^7.18.1",
     "sass": "^1.101.0"
   },
   "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
     "@types/node": "^24.13.2",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",

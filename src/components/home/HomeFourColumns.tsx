@@ -1,88 +1,49 @@
 import { useNavigate } from 'react-router-dom';
 import {
   MAGAZINE_COVERS,
+  MAGAZINE_MORE_LINK,
   MEMBER_ACTIVITIES,
+  MEMBER_ACTIVITIES_MORE_LINK,
   MEMBER_PUBLICITY_NAMES,
+  STANDARD_MORE_LINK,
   STANDARD_NEWS,
 } from '../../data/homeData';
-import { articleDetailLink, articleListLink, memberCompaniesLink, navigateLink } from '../../utils/legacyRoutes';
-import EfmacImage from '../common/EfmacImage';
+import { articleDetailLink, memberCompaniesLink, navigateLink } from '../../utils/legacyRoutes';
+import MagazineCarousel from './MagazineCarousel';
+
+function ColumnHeader({ title, onMore }: { title: string; onMore?: () => void }) {
+  return (
+    <div className="home-column-header">
+      <span className="home-column-title">{title}</span>
+      {onMore ? (
+        <span className="home-column-more" onClick={onMore}>
+          更多
+        </span>
+      ) : null}
+    </div>
+  );
+}
 
 export default function HomeFourColumns() {
   const navigate = useNavigate();
+  const memberMoreLink = memberCompaniesLink();
+
+  const openMore = (link: string) => () => navigateLink(link, navigate);
 
   return (
     <div className="home-row home-row-quad">
       <div className="home-quad-col">
         <div className="home-column-panel">
-          <div className="home-column-header">
-            <span className="home-column-title">团体标准建设</span>
-            <span
-              className="home-column-more"
-              onClick={() => navigateLink(articleListLink(70, 705750), navigate)}
-            >
-              更多
-            </span>
-          </div>
-          <ul className="home-column-list">
+          <ColumnHeader title="团体标准建设" onMore={openMore(STANDARD_MORE_LINK)} />
+          <ul className="home-column-list home-column-list--standards">
             {STANDARD_NEWS.map((item) => (
-              <li key={item.id} className="home-column-item">
-                <span className="home-news-bullet orange" />
-                <span
-                  className="home-column-text"
-                  onClick={() => navigateLink(item.link ?? articleDetailLink(item.id), navigate)}
-                >
-                  {item.title}
-                </span>
-                <span className="home-news-date">{item.date}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
-      <div className="home-quad-col">
-        <div className="home-column-panel">
-          <div className="home-column-header">
-            <span className="home-column-title">《财务管理研究》</span>
-            <span className="home-column-more">更多</span>
-          </div>
-          <div className="magazine-covers">
-            {MAGAZINE_COVERS.map((cover) => (
-              <div
-                key={cover.id}
-                className="magazine-cover-item"
-                onClick={() => navigateLink(cover.link, navigate)}
+              <li
+                key={item.id}
+                className="home-column-item"
+                onClick={() => navigateLink(item.link ?? articleDetailLink(item.id), navigate)}
               >
-                <EfmacImage src={cover.image} alt={cover.title} />
-                <p>{cover.title}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="home-quad-col">
-        <div className="home-column-panel">
-          <div className="home-column-header">
-            <span className="home-column-title">会员活动</span>
-            <span
-              className="home-column-more"
-              onClick={() => navigateLink(articleListLink(13, 1301), navigate)}
-            >
-              更多
-            </span>
-          </div>
-          <ul className="home-column-list">
-            {MEMBER_ACTIVITIES.map((item) => (
-              <li key={item.id} className="home-column-item">
-                <span className="home-news-bullet orange" />
-                <span
-                  className="home-column-text"
-                  onClick={() => navigateLink(item.link ?? articleDetailLink(item.id), navigate)}
-                >
-                  {item.title}
-                </span>
+                <span className="home-news-bullet" />
+                <span className="home-column-text">{item.title}</span>
                 <span className="home-news-date">{item.date}</span>
               </li>
             ))}
@@ -91,19 +52,45 @@ export default function HomeFourColumns() {
       </div>
 
       <div className="home-quad-col">
-        <div className="home-panel home-panel-fill member-publicity-panel">
-          <div className="home-panel-header">
-            <div className="home-panel-title">会员公示</div>
-            <span
-              className="home-panel-more"
-              onClick={() => navigateLink(memberCompaniesLink(), navigate)}
-            >
-              更多
-            </span>
+        <div className="home-column-panel home-column-panel--magazine">
+          <ColumnHeader title="《财务管理研究》" onMore={openMore(MAGAZINE_MORE_LINK)} />
+          <div className="magazine-carousel-body">
+            <MagazineCarousel covers={MAGAZINE_COVERS} />
           </div>
-          <ul className="member-publicity-list">
-            {MEMBER_PUBLICITY_NAMES.map((name) => (
-              <li key={name}>{name}</li>
+        </div>
+      </div>
+
+      <div className="home-quad-col">
+        <div className="home-column-panel">
+          <ColumnHeader title="会员活动" onMore={openMore(MEMBER_ACTIVITIES_MORE_LINK)} />
+          <ul className="home-column-list home-column-list--activities">
+            {MEMBER_ACTIVITIES.map((item) => (
+              <li
+                key={item.id}
+                className="home-column-item"
+                onClick={() => navigateLink(item.link ?? articleDetailLink(item.id), navigate)}
+              >
+                <span className="home-news-bullet" />
+                <span className="home-column-text">{item.title}</span>
+                <span className="home-news-date">{item.date}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div className="home-quad-col">
+        <div className="home-column-panel">
+          <ColumnHeader title="会员公示" onMore={openMore(memberMoreLink)} />
+          <ul className="home-column-list home-column-list--plain">
+            {MEMBER_PUBLICITY_NAMES.map((name, index) => (
+              <li
+                key={`${name}-${index}`}
+                className="home-column-item home-column-item--plain"
+                onClick={openMore(memberMoreLink)}
+              >
+                <span className="home-column-text">{name}</span>
+              </li>
             ))}
           </ul>
         </div>

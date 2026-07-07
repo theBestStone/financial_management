@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-07T08:44:11.345Z",
+  "fetchedAt": "2026-07-07T14:11:17.156Z",
   "flipSpeed": 3,
   "themeWidth": 1300,
   "noticeBanner": {
@@ -190,7 +190,7 @@
     {
       "id": "2354260",
       "categorySn": 1302,
-      "categoryName": "通知公告,工作动态",
+      "categoryName": "通知公告",
       "parentSn": 13,
       "title": "中国亚洲经济发展协会会长权顺基接受纪律审查和监察调查",
       "foreword": "",
@@ -201,8 +201,8 @@
     },
     {
       "id": "2335578",
-      "categorySn": 1302,
-      "categoryName": "通知公告,协会动态,工作动态",
+      "categorySn": 1301,
+      "categoryName": "协会动态,通知公告",
       "parentSn": 13,
       "title": "全国性行业协会商会领域违规违纪违法典型案例",
       "foreword": "",
@@ -213,8 +213,8 @@
     },
     {
       "id": "2335300",
-      "categorySn": 1302,
-      "categoryName": "通知公告,协会动态,工作动态",
+      "categorySn": 1301,
+      "categoryName": "协会动态,通知公告",
       "parentSn": 13,
       "title": "中央党的建设工作领导小组印发《关于学习贯彻习近平党建思想的通知》",
       "foreword": "",
@@ -226,7 +226,7 @@
     {
       "id": "2335299",
       "categorySn": 1301,
-      "categoryName": "协会动态,工作动态",
+      "categoryName": "协会动态",
       "parentSn": 13,
       "title": "习近平党建思想内涵要义",
       "foreword": "",
@@ -238,7 +238,7 @@
     {
       "id": "2335298",
       "categorySn": 1301,
-      "categoryName": "协会动态,工作动态",
+      "categoryName": "协会动态",
       "parentSn": 13,
       "title": "全国党建工作座谈会在京召开",
       "foreword": "",
@@ -250,7 +250,7 @@
     {
       "id": "2321796",
       "categorySn": 1301,
-      "categoryName": "协会动态,工作动态",
+      "categoryName": "协会动态",
       "parentSn": 13,
       "title": "第十联合党委督导组检查指导协会“树立和践行正确政绩观学习教育”开展情况",
       "foreword": "",
@@ -262,7 +262,7 @@
     {
       "id": "2321043",
       "categorySn": 1301,
-      "categoryName": "协会动态,工作动态",
+      "categoryName": "协会动态",
       "parentSn": 13,
       "title": "深学细悟强党性 笃行实干促规范",
       "foreword": "",
@@ -497,8 +497,8 @@
   "standards": [
     {
       "id": "2264092",
-      "categorySn": 1302,
-      "categoryName": "通知公告,团体标准建设,标准发布",
+      "categorySn": 1353,
+      "categoryName": "团体标准建设",
       "parentSn": 13,
       "title": "关于发布《反洗钱师职业能力水平评价标准》团体标准的公告",
       "foreword": "",
@@ -509,8 +509,8 @@
     },
     {
       "id": "2259273",
-      "categorySn": 1302,
-      "categoryName": "通知公告,团体标准建设,标准发布",
+      "categorySn": 1353,
+      "categoryName": "团体标准建设",
       "parentSn": 13,
       "title": "关于批准发布《企业数据资产管理规范》团体标准的公告",
       "foreword": "",
@@ -521,8 +521,8 @@
     },
     {
       "id": "2256883",
-      "categorySn": 1301,
-      "categoryName": "协会动态,团体标准建设",
+      "categorySn": 1353,
+      "categoryName": "团体标准建设",
       "parentSn": 13,
       "title": "《企业数据资产管理规范》送审稿专家评审会在京顺利召开",
       "foreword": "2026年1月28日，《企业数据资产管理规范》团体标准送审稿专家评审会在中财协会议室召开。《企业数据",
@@ -533,8 +533,8 @@
     },
     {
       "id": "2237245",
-      "categorySn": 1302,
-      "categoryName": "通知公告,团体标准建设,征求意见",
+      "categorySn": 1353,
+      "categoryName": "团体标准建设",
       "parentSn": 13,
       "title": "【通知】中国企业财务管理协会关于公开征求《企业数据资产管理规范》团体标准意见的通知",
       "foreword": "附件：《企业数据资产管理规范》编制说明.pdf《企业数据资产管理规范》征求意见稿.pdf《企业数据资",
@@ -545,8 +545,8 @@
     },
     {
       "id": "2231507",
-      "categorySn": 1302,
-      "categoryName": "通知公告,团体标准建设,征求意见",
+      "categorySn": 1353,
+      "categoryName": "团体标准建设",
       "parentSn": 13,
       "title": "关于公开征求《反洗钱师职业能力水平评价标准》团体标准意见的通知",
       "foreword": "附件1：中国企业财务管理协会关于公开征求《反洗钱师职业能力水平评价标准》团体标准意见的通知.pdf附",
@@ -557,8 +557,8 @@
     },
     {
       "id": "2223045",
-      "categorySn": 1302,
-      "categoryName": "通知公告,团体标准建设",
+      "categorySn": 1353,
+      "categoryName": "团体标准建设",
       "parentSn": 13,
       "title": "关于邀请参加《企业合规管理体系 建设与应用指南》团体标准参编单位的邀请函",
       "foreword": "团体标准作为我国新型标准体系的重要组成，是市场主体自主制定、共同遵循的规范性文件，具有引导技术创新、",
@@ -569,8 +569,8 @@
     },
     {
       "id": "2212138",
-      "categorySn": 1302,
-      "categoryName": "通知公告,团体标准建设,标准立项",
+      "categorySn": 1353,
+      "categoryName": "团体标准建设",
       "parentSn": 13,
       "title": "关于《企业合规管理体系 建设与应用指南》团体标准立项公告",
       "foreword": "",
@@ -581,8 +581,8 @@
     },
     {
       "id": "2212136",
-      "categorySn": 1301,
-      "categoryName": "协会动态,团体标准建设",
+      "categorySn": 1353,
+      "categoryName": "团体标准建设",
       "parentSn": 13,
       "title": "中国企业财务管理协会成功召开《企业合规管理体系 建设与应用指南》团体标准立项评审会",
       "foreword": "2025年10月28日，中国企业财务管理协会在京组织召开了《企业合规管理体系 建设与应用指南》团体标",
@@ -593,8 +593,8 @@
     },
     {
       "id": "2201556",
-      "categorySn": 1302,
-      "categoryName": "通知公告,团体标准建设",
+      "categorySn": 1353,
+      "categoryName": "团体标准建设",
       "parentSn": 13,
       "title": "关于征集《反洗钱师职业能力水平评价标准》团体标准参编单位的通知",
       "foreword": "",
@@ -605,8 +605,8 @@
     },
     {
       "id": "2200738",
-      "categorySn": 1302,
-      "categoryName": "通知公告,团体标准建设,标准立项",
+      "categorySn": 1353,
+      "categoryName": "团体标准建设",
       "parentSn": 13,
       "title": "关于《反洗钱师职业能力水平评价标准》团体标准立项公告",
       "foreword": "",
@@ -619,8 +619,8 @@
   "activities": [
     {
       "id": "2272251",
-      "categorySn": 1302,
-      "categoryName": "通知公告, 会员活动",
+      "categorySn": 1354,
+      "categoryName": " 会员活动",
       "parentSn": 13,
       "title": "【案例征集】关于组织申报第二届国有企业财务数智化创新成果的通知",
       "foreword": "",
@@ -775,9 +775,82 @@
       "publishTime": "2026-05-18 19:02:00",
       "roleCode": 3,
       "permission": "会员"
+    },
+    {
+      "id": "13128255040421888",
+      "title": "2026年4月刊",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/journal/list/20260507/f7b31a645f0f47a6808b50788e039a6b/pdf-cover.jpg",
+      "publishStatus": 1,
+      "publishTime": "2026-04-29 12:47:02",
+      "roleCode": 3,
+      "permission": "会员"
+    },
+    {
+      "id": "12891412219764736",
+      "title": "2026年3月刊",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/journal/list/20260326/f83a1c047b004cd2a24dfc1f2b5f0abe/pdf-cover.jpg",
+      "publishStatus": 1,
+      "publishTime": "2026-03-26 16:53:59",
+      "roleCode": 3,
+      "permission": "会员"
+    },
+    {
+      "id": "12732227738996736",
+      "title": "2026年2月刊",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/journal/list/20260226/c54edfe1252c4a719bb3fe645a13ea33/pdf-cover.jpg",
+      "publishStatus": 1,
+      "publishTime": "2026-02-26 14:12:16",
+      "roleCode": 3,
+      "permission": "会员"
+    },
+    {
+      "id": "12534000397721600",
+      "title": "2026年1月刊",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/journal/list/20260122/c5f3fb9689894219b76f7727db36f812/pdf-cover.jpg",
+      "publishStatus": 1,
+      "publishTime": "2026-01-22 14:00:18",
+      "roleCode": 3,
+      "permission": "会员"
+    },
+    {
+      "id": "12398468586151936",
+      "title": "2025年12月刊",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/journal/list/20251229/e820d731c496408884a41d904541acda/pdf-cover.jpg",
+      "publishStatus": 1,
+      "publishTime": "2025-12-29 15:32:50",
+      "roleCode": 3,
+      "permission": "会员"
+    },
+    {
+      "id": "12199380120379392",
+      "title": "2025年11月刊",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/journal/list/20251124/2fbb1c49a02e42df9f1bdcbc03feb7b3/pdf-cover.jpg",
+      "publishStatus": 1,
+      "publishTime": "2025-11-24 11:41:10",
+      "roleCode": 3,
+      "permission": "会员"
+    },
+    {
+      "id": "12041397153570816",
+      "title": "2025年10月刊",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/journal/list/20251027/51a09002d04a48d1839aeeaf731ecc3f/pdf-cover.jpg",
+      "publishStatus": 1,
+      "publishTime": "2025-10-27 14:04:52",
+      "roleCode": 3,
+      "permission": "会员"
+    },
+    {
+      "id": "11848867625181184",
+      "title": "2025年9月刊",
+      "thumbImg": "https://console.shanghuiyidisk.com/shy/623/journal/list/20251011/5f2a1646110e4900a605700845f11688/pdf-cover.jpg",
+      "publishStatus": 1,
+      "publishTime": "2025-09-23 13:48:32",
+      "roleCode": 3,
+      "permission": "会员"
     }
   ],
   "memberPublicity": [
+    "会员公示",
     "中核工业集团",
     "申能（集团）",
     "国家开发投资集团有限公司",
@@ -791,8 +864,7 @@
     "上海电气集团企业服务有限公司",
     "国家石油天然气管网集团有限公司",
     "中国煤炭科工集团有限公司",
-    "太平洋保险集团有限公司",
-    "中国储备粮管理集团有限公司"
+    "太平洋保险集团有限公司"
   ],
   "enterpriseLogos": [
     "https://console.shanghuiyidisk.com/shy/623/pc/574c675dcb95432385a7047b4d771814_home.webp",

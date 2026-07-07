@@ -18,7 +18,7 @@ export default function PhotoReportPanel() {
         tabs={PHOTO_REPORT_TABS}
         activeKey={activeTab}
         onTabChange={setActiveTab}
-        mode="inline"
+        mode="merged"
       />
       <MiniCarousel key={activeTab} slides={slides} className="photo-report-carousel" />
     </div>

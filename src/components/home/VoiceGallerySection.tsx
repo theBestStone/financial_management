@@ -15,7 +15,7 @@ export default function VoiceGallerySection() {
         tabs={VOICE_GALLERY_TABS}
         activeKey={activeTab}
         onTabChange={setActiveTab}
-        mode="inline"
+        mode="merged"
       />
       <div className="voice-gallery-row">
         {VOICE_GALLERY.map((item) => (

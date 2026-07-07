@@ -1,11 +1,32 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { searchArticles } from '../../data/content';
+import articlesCache from '../../data/articlesLive.json';
 import { articleDetailLink, navigateLink } from '../../utils/legacyRoutes';
 
 interface SearchModalProps {
   open: boolean;
   onClose: () => void;
+}
+
+function searchLiveArticles(keyword: string) {
+  const kw = keyword.toLowerCase();
+  const seen = new Set<number>();
+  const results: { id: number; title: string; date: string; categoryName: string }[] = [];
+  for (const bucket of Object.values(articlesCache.listByCategory)) {
+    for (const item of bucket.items) {
+      if (seen.has(item.id)) continue;
+      if (item.title.toLowerCase().includes(kw)) {
+        seen.add(item.id);
+        results.push({
+          id: item.id,
+          title: item.title,
+          date: item.publishTime,
+          categoryName: item.categoryName,
+        });
+      }
+    }
+  }
+  return results;
 }
 
 export default function SearchModal({ open, onClose }: SearchModalProps) {
@@ -25,9 +46,12 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
     return () => window.removeEventListener('keydown', handleKey);
   }, [open, onClose]);
 
-  if (!open) return null;
+  const results = useMemo(
+    () => (keyword.trim() ? searchLiveArticles(keyword.trim()) : []),
+    [keyword]
+  );
 
-  const results = keyword.trim() ? searchArticles(keyword.trim()) : [];
+  if (!open) return null;
 
   const handleResultClick = (id: number) => {
     navigateLink(articleDetailLink(id), navigate);
@@ -74,7 +98,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
                 <span className="search-result-tag">{item.categoryName}</span>
                 <div>
                   <div>{item.title}</div>
-                  <div style={{ color: '#909399', fontSize: 13, marginTop: 4 }}>{item.publishTime}</div>
+                  <div style={{ color: '#909399', fontSize: 13, marginTop: 4 }}>{item.date}</div>
                 </div>
               </div>
             ))
