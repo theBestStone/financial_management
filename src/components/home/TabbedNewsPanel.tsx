@@ -10,7 +10,7 @@ export default function TabbedNewsPanel() {
   const items = activeTab === 'notice' ? NOTICE_NEWS : ASSOCIATION_NEWS;
 
   return (
-    <div className="home-panel home-panel-tab">
+    <div className="home-panel home-panel-tab tabbed-news-panel">
       <HomeSectionHeader
         tabs={NOTICE_TABS}
         activeKey={activeTab}
@@ -26,13 +26,7 @@ export default function TabbedNewsPanel() {
               onClick={() => navigateLink(item.link ?? articleDetailLink(item.id), navigate)}
             >
               <span className="home-news-title-text">{item.title}</span>
-              {item.isNew && (
-                <img
-                  className="new-tag"
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='12' viewBox='0 0 24 12'%3E%3Crect fill='%23e60016' rx='2' width='24' height='12'/%3E%3Ctext x='12' y='9' fill='white' font-size='8' text-anchor='middle' font-family='Arial'%3ENew%3C/text%3E%3C/svg%3E"
-                  alt="New"
-                />
-              )}
+              {item.isNew && <em className="new-tag-italic">New</em>}
             </span>
             <span className="home-news-date">{item.date}</span>
           </li>

@@ -6,19 +6,19 @@ export const NAV_LIST: NavItem[] = [
     categoryName: '协会概述',
     categorySn: 71,
     children: [
-      { categoryName: '协会简介', categorySn: 7150 },
-      { categoryName: '协会章程', categorySn: 7151 },
-      { categoryName: '组织架构', categorySn: 7164 },
+      { categoryName: '协会简介', categorySn: 7150, isList: 0 },
+      { categoryName: '协会章程', categorySn: 7151, isList: 0 },
+      { categoryName: '组织架构', categorySn: 7164, isList: 0 },
       {
         categoryName: '协会领导',
         categorySn: 7162,
-        children: [{ categoryName: '协会领导', categorySn: 716250 }],
+        children: [{ categoryName: '协会领导', categorySn: 716250, isList: 0 }],
       },
       {
         categoryName: '机构设置',
         categorySn: 7161,
         children: [
-          { categoryName: '内设机构', categorySn: 716152 },
+          { categoryName: '内设机构', categorySn: 716152, isList: 0 },
           { categoryName: '分支机构', categorySn: 716151 },
           { categoryName: '合作机构', categorySn: 716153 },
         ],
@@ -108,7 +108,7 @@ export const NAV_LIST: NavItem[] = [
           { categoryName: '拔尖人才专项财务管理研修班', categorySn: 735857 },
           { categoryName: '高端人才专项财务管理研修班', categorySn: 735858 },
           { categoryName: '企业定制化内训', categorySn: 735854 },
-          { categoryName: '人社部"知识更新工程"专题培训', categorySn: 735855 },
+          { categoryName: '人社部“知识更新工程”专题培训', categorySn: 735855 },
         ],
       },
     ],
@@ -119,9 +119,9 @@ export const NAV_LIST: NavItem[] = [
     children: [
       { categoryName: '会员发展和服务办法', categorySn: 7255 },
       { categoryName: '会员权益', categorySn: 7253 },
-      { categoryName: '申请入会', linkUrl: '/article/16_0_0_0.html?shId=623' },
-      { categoryName: '会员查询', linkUrl: '/subject/16_2_0_2351?shId=623' },
-      { categoryName: '会员单位名录', linkUrl: '/companyJob/1_0_0_0.html' },
+      { categoryName: '申请入会', linkUrl: '/member/apply' },
+      { categoryName: '会员查询', linkUrl: '/member/query' },
+      { categoryName: '会员单位名录', linkUrl: '/member/companies' },
     ],
   },
   {

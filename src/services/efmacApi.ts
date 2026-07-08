@@ -1,5 +1,5 @@
 import CryptoJS from 'crypto-js';
-import { htmlToParagraphs } from '../utils/htmlToText';
+import { htmlToArticleContent } from '../utils/htmlToText';
 
 const jG = CryptoJS.enc.Utf8.parse('shy@2019@0701@zp');
 const GG = CryptoJS.enc.Utf8.parse('123456');
@@ -80,6 +80,7 @@ export interface LiveArticleDetail {
   author?: string;
   views?: number;
   thumb?: string;
+  imageCaption?: string;
 }
 
 interface RawListItem {
@@ -123,7 +124,8 @@ function mapListItem(item: RawListItem): LiveArticleListItem {
 }
 
 function mapDetail(item: RawDetail, views?: number): LiveArticleDetail {
-  const paragraphs = htmlToParagraphs(item.article || item.content || item.foreword || '');
+  const html = item.article || item.content || item.foreword || '';
+  const { paragraphs, thumb, imageCaption } = htmlToArticleContent(html);
   return {
     id: Number(item.id),
     title: item.title,
@@ -134,7 +136,8 @@ function mapDetail(item: RawDetail, views?: number): LiveArticleDetail {
     publishTime: item.publishTime?.slice(0, 10) ?? '',
     author: item.source,
     views,
-    thumb: item.thumbImg,
+    thumb: item.thumbImg || thumb,
+    imageCaption,
   };
 }
 
@@ -161,4 +164,18 @@ export async function fetchArticleDetail(id: number): Promise<LiveArticleDetail 
   );
   if (!data?.detail) return null;
   return mapDetail(data.detail, data.views);
+}
+
+export async function fetchArticleDetailByCategorySn(
+  categorySn: number
+): Promise<LiveArticleDetail | null> {
+  const data = await apiGet<{ detail: RawDetail; views?: number } | RawDetail>(
+    '/pcWeb/infoApp/article/detailByCategorySn',
+    { categorySn }
+  );
+  if (!data) return null;
+  const detail = 'detail' in data && data.detail ? data.detail : (data as RawDetail);
+  if (!detail?.title) return null;
+  const views = 'views' in data ? data.views : undefined;
+  return mapDetail(detail, views);
 }

@@ -1,28 +1,30 @@
-/** 原站 efmac.net URL 规则（协会易 Nuxt3） */
+/** 站内路由（由原 efmac.net 规则简化，不含 .html） */
 
 export const SH_ID = 623;
 
 export function articleListLink(parentSn: number, categorySn: number, page = 0): string {
-  return `/article/${parentSn}_${categorySn}_${page}_0.html?shId=${SH_ID}`;
+  return `/article/${parentSn}_${categorySn}_${page}_0`;
 }
 
 export function articleDetailLink(id: number): string {
-  return `/article/detail/${id}.html?shId=${SH_ID}`;
+  return `/article/detail/${id}`;
 }
 
 export function memberApplyLink(): string {
-  return `/article/16_0_0_0.html?shId=${SH_ID}`;
+  return '/member/apply';
 }
 
 export function memberQueryLink(): string {
-  return `/subject/16_2_0_2351?shId=${SH_ID}`;
+  return '/member/query';
 }
 
 export function memberCompaniesLink(): string {
-  return `/companyJob/1_0_0_0.html`;
+  return '/member/companies';
 }
 
-export function parseLegacyListPath(path: string): { parentSn: number; categorySn: number; page: number } | null {
+export function parseLegacyListPath(
+  path: string
+): { parentSn: number; categorySn: number; page: number; detailId: number } | null {
   const clean = path.replace(/\?.*$/, '').replace(/\.html$/, '');
   const parts = clean.split('_').map(Number);
   if (parts.length < 2 || parts.some((n) => Number.isNaN(n))) return null;
@@ -30,6 +32,7 @@ export function parseLegacyListPath(path: string): { parentSn: number; categoryS
     parentSn: parts[0],
     categorySn: parts[1],
     page: parts[2] ?? 0,
+    detailId: parts[3] ?? 0,
   };
 }
 
@@ -37,6 +40,10 @@ export function parseLegacyDetailPath(path: string): number | null {
   const clean = path.replace(/\?.*$/, '').replace(/\.html$/, '');
   const id = Number(clean);
   return Number.isNaN(id) ? null : id;
+}
+
+export function resolveListCategorySn(parentSn: number, categorySn: number): number {
+  return categorySn === 0 ? parentSn : categorySn;
 }
 
 export function categoryLink(categorySn: number, parentSn?: number): string {
@@ -62,11 +69,35 @@ export function isExternalUrl(link: string): boolean {
   return link.startsWith('http://') || link.startsWith('https://');
 }
 
+/** 将 API / 原站带 .html 的链接转为站内干净路径 */
+export function normalizeInternalLink(link: string): string {
+  if (isExternalUrl(link)) return link;
+
+  const path = link.split('?')[0].replace(/\.html$/, '');
+
+  if (path === '/article/16_0_0_0') return memberApplyLink();
+  if (path.startsWith('/companyJob/')) return memberCompaniesLink();
+  if (path.startsWith('/subject/')) return memberQueryLink();
+
+  const listWithDetail = path.match(/^\/article\/\d+_\d+_\d+_(\d+)$/);
+  if (listWithDetail) {
+    const detailId = Number(listWithDetail[1]);
+    return detailId > 0 ? articleDetailLink(detailId) : path;
+  }
+
+  const detailMatch = path.match(/_0_(\d+)$/);
+  if (detailMatch && path.startsWith('/article/')) {
+    const detailId = Number(detailMatch[1]);
+    return detailId > 0 ? articleDetailLink(detailId) : path;
+  }
+
+  return path;
+}
+
 export function navigateLink(link: string, navigate: (path: string) => void): void {
   if (isExternalUrl(link)) {
     window.open(link, '_blank');
     return;
   }
-  const path = link.split('?')[0];
-  navigate(path);
+  navigate(normalizeInternalLink(link));
 }

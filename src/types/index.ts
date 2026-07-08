@@ -3,6 +3,8 @@ export interface NavItem {
   categorySn?: number;
   linkUrl?: string;
   external?: boolean;
+  /** 0=单页内容，1=列表，2=目录，3=外链 */
+  isList?: number;
   children?: NavItem[];
 }
 

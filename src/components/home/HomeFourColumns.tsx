@@ -27,12 +27,13 @@ function ColumnHeader({ title, onMore }: { title: string; onMore?: () => void })
 export default function HomeFourColumns() {
   const navigate = useNavigate();
   const memberMoreLink = memberCompaniesLink();
+  const publicityNames = MEMBER_PUBLICITY_NAMES.filter((name) => name !== '会员公示');
 
   const openMore = (link: string) => () => navigateLink(link, navigate);
 
   return (
     <div className="home-row home-row-quad">
-      <div className="home-quad-col">
+      <div className="home-quad-col home-quad-col--standards">
         <div className="home-column-panel">
           <ColumnHeader title="团体标准建设" onMore={openMore(STANDARD_MORE_LINK)} />
           <ul className="home-column-list home-column-list--standards">
@@ -51,7 +52,7 @@ export default function HomeFourColumns() {
         </div>
       </div>
 
-      <div className="home-quad-col">
+      <div className="home-quad-col home-quad-col--magazine">
         <div className="home-column-panel home-column-panel--magazine">
           <ColumnHeader title="《财务管理研究》" onMore={openMore(MAGAZINE_MORE_LINK)} />
           <div className="magazine-carousel-body">
@@ -60,7 +61,7 @@ export default function HomeFourColumns() {
         </div>
       </div>
 
-      <div className="home-quad-col">
+      <div className="home-quad-col home-quad-col--activities">
         <div className="home-column-panel">
           <ColumnHeader title="会员活动" onMore={openMore(MEMBER_ACTIVITIES_MORE_LINK)} />
           <ul className="home-column-list home-column-list--activities">
@@ -79,11 +80,11 @@ export default function HomeFourColumns() {
         </div>
       </div>
 
-      <div className="home-quad-col">
+      <div className="home-quad-col home-quad-col--publicity">
         <div className="home-column-panel">
           <ColumnHeader title="会员公示" onMore={openMore(memberMoreLink)} />
           <ul className="home-column-list home-column-list--plain">
-            {MEMBER_PUBLICITY_NAMES.map((name, index) => (
+            {publicityNames.map((name, index) => (
               <li
                 key={`${name}-${index}`}
                 className="home-column-item home-column-item--plain"

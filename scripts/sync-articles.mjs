@@ -5,6 +5,8 @@ const CATEGORY_SNS = [
   84, 1301, 1302, 1353, 1354, 80, 7150, 7151, 7164, 705750, 7255, 7253, 7950,
 ];
 
+const SINGLE_CONTENT_CATEGORY_SNS = [7150, 7151, 7164, 716250];
+
 async function fetchCategoryArticles(categorySn, pageNum = 1, pageSize = 50) {
   const res = await apiGet('/pcWeb/infoApp/article/list', {
     categorySns: String(categorySn),
@@ -21,8 +23,8 @@ async function fetchCategoryArticles(categorySn, pageNum = 1, pageSize = 50) {
   };
 }
 
-async function fetchArticleDetail(id) {
-  const res = await apiGet('/pcWeb/infoApp/article/detail', { id });
+async function fetchArticleDetailByCategory(categorySn) {
+  const res = await apiGet('/pcWeb/infoApp/article/detailByCategorySn', { categorySn });
   if (res.errno !== 0) return null;
   return res.data?.detail ?? null;
 }
@@ -78,10 +80,20 @@ for (const id of detailIds) {
   }
 }
 
+const detailsByCategory = {};
+for (const categorySn of SINGLE_CONTENT_CATEGORY_SNS) {
+  const detail = await fetchArticleDetailByCategory(categorySn);
+  if (detail) {
+    detailsByCategory[categorySn] = mapDetail(detail);
+    console.log(`category detail ${categorySn}: ${detail.title?.slice(0, 40)}`);
+  }
+}
+
 const output = {
   fetchedAt: new Date().toISOString(),
   listByCategory,
   details,
+  detailsByCategory,
 };
 
 fs.writeFileSync('src/data/articlesLive.json', JSON.stringify(output, null, 2));

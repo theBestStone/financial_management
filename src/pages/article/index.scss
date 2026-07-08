@@ -1,0 +1,27 @@
+.content-page-wrap {
+    width: 1200px;
+    margin: 0 auto;
+
+    .sidebar-menu {
+        .sidebar-menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+        }
+    }
+
+    .content-page-header {
+        .content-page-header-breadcrumb {
+            .breadcrumb {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+
+.page-content {
+    // background: #fff;
+}

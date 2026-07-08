@@ -2,8 +2,8 @@ import { Navigate, useParams } from 'react-router-dom';
 import ArticleListPage from './ArticleListPage';
 import ArticleDetailPage from './ArticleDetailPage';
 import MemberApplyPage from './MemberApplyPage';
-import { parseLegacyDetailPath, parseLegacyListPath } from '../utils/legacyRoutes';
-
+import { parseLegacyDetailPath, parseLegacyListPath, resolveListCategorySn } from '../utils/legacyRoutes';
+import "../pages/article/index.scss";
 /** 统一处理 /article/* 原站与简化路由 */
 export default function ArticleRouteHandler() {
   const { '*': rest = '' } = useParams();
@@ -20,9 +20,14 @@ export default function ArticleRouteHandler() {
     if (parsed.parentSn === 16 && parsed.categorySn === 0) {
       return <MemberApplyPage />;
     }
+    const explicitDetailId = parsed.detailId;
+    if (explicitDetailId && explicitDetailId !== 0) {
+      return <ArticleDetailPage overrideId={explicitDetailId} />;
+    }
+    const categorySn = resolveListCategorySn(parsed.parentSn, parsed.categorySn);
     return (
       <ArticleListPage
-        overrideCategorySn={parsed.categorySn}
+        overrideCategorySn={categorySn}
         overridePage={parsed.page + 1}
       />
     );

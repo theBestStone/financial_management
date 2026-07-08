@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Header from './Header';
 import NavBar from './NavBar';
 import Footer from './Footer';
@@ -12,6 +12,8 @@ import { efmacBgUrl } from '../../utils/efmacMedia';
 export default function Layout() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   return (
     <div
@@ -25,7 +27,7 @@ export default function Layout() {
         />
         <NavBar />
       </div>
-      <div className="page-content">
+      <div className={`page-content ${isHomePage ? 'page-content--home' : ''}`.trim()}>
         <Outlet />
       </div>
       <Footer />

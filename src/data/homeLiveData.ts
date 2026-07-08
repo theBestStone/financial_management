@@ -1,9 +1,11 @@
 import live from './homeLive.json';
+import articlesLive from './articlesLive.json';
 import { resolveLocalAsset } from '../utils/localAsset';
 import {
   articleDetailLink,
   articleListLink,
   memberApplyLink,
+  normalizeInternalLink,
   SH_ID,
 } from '../utils/legacyRoutes';
 
@@ -65,7 +67,13 @@ interface LivePeriodical {
   thumbImg: string;
 }
 
-/** 解析为本地 /assets 绝对路径 */
+interface CategoryArticle {
+  id: number;
+  title: string;
+  publishTime: string;
+  isNew?: boolean;
+}
+
 export function normalizeCdnUrl(url?: string): string {
   if (!url) return '';
   return resolveLocalAsset(url) ?? url.split('?')[0];
@@ -78,9 +86,9 @@ function formatDate(publishTime: string): string {
 function resolveArticleLink(link?: string, articleId?: string): string {
   if (!link) return articleId ? articleDetailLink(Number(articleId)) : '/';
   if (link.startsWith('http://') || link.startsWith('https://')) return link;
-  const detailMatch = link.match(/_0_(\d+)\.html/);
+  const detailMatch = link.match(/_0_(\d+)(?:\.html)?(?:\?|$)/);
   if (detailMatch) return articleDetailLink(Number(detailMatch[1]));
-  return link.split('?')[0];
+  return normalizeInternalLink(link);
 }
 
 function mapArticle(item: LiveArticle): HomeNewsItem {
@@ -91,6 +99,16 @@ function mapArticle(item: LiveArticle): HomeNewsItem {
     date: formatDate(item.publishTime),
     isNew: item.isNew,
     link: articleDetailLink(id),
+  };
+}
+
+function mapCategoryArticle(item: CategoryArticle, isNew = false): HomeNewsItem {
+  return {
+    id: item.id,
+    title: item.title,
+    date: formatDate(item.publishTime),
+    isNew: isNew || item.isNew,
+    link: articleDetailLink(item.id),
   };
 }
 
@@ -131,6 +149,10 @@ const data = live as {
   enterpriseLogos: string[];
 };
 
+const articleLists = articlesLive as {
+  listByCategory: Record<string, { items: CategoryArticle[] }>;
+};
+
 export const HOME_THEME_WIDTH = data.themeWidth || 1300;
 export const CAROUSEL_FLIP_MS = (data.flipSpeed || 3) * 1000;
 
@@ -141,13 +163,23 @@ export const TOP_NOTICE = {
 
 export const POLITICS_NEWS: HomeNewsItem[] = (data.politics ?? []).map(mapArticle);
 
-export const NOTICE_NEWS: HomeNewsItem[] = (data.tabNews ?? [])
-  .filter((item) => item.categorySn === 1302 || String(item.categoryName ?? '').includes('通知公告'))
-  .map(mapArticle);
+const NOTICE_CATEGORY_NEWS = articleLists.listByCategory['1302']?.items ?? [];
+const ASSOCIATION_CATEGORY_NEWS = articleLists.listByCategory['1301']?.items ?? [];
 
-export const ASSOCIATION_NEWS: HomeNewsItem[] = (data.tabNews ?? [])
-  .filter((item) => item.categorySn === 1301)
-  .map(mapArticle);
+export const NOTICE_NEWS: HomeNewsItem[] = [
+  {
+    id: 900905,
+    title: '【9月5日考试】关于2026年度IAAP联合认证全国统一考试通知',
+    date: '2026-07-08',
+    isNew: true,
+    link: articleDetailLink(2314937),
+  },
+  ...NOTICE_CATEGORY_NEWS.slice(0, 9).map((item, index) => mapCategoryArticle(item, index === 0)),
+];
+
+export const ASSOCIATION_NEWS: HomeNewsItem[] = ASSOCIATION_CATEGORY_NEWS
+  .slice(0, 10)
+  .map((item) => mapCategoryArticle(item));
 
 export const CAROUSEL_ITEMS: CarouselSlide[] = (data.carousel ?? []).map(mapCarousel);
 
@@ -156,9 +188,7 @@ export const PHOTO_REPORT_TABS: SectionTabConfig[] = [
   { key: 'leadership', label: '协会领导动态', moreLink: articleListLink(71, 716250) },
 ];
 
-export const PHOTO_REPORT_SLIDES: CarouselSlide[] = (data.photoReport ?? []).map(mapCarousel);
-
-/** 协会领导动态 Tab 暂用同一组轮播图（与官网模块 articleIds 一致） */
+export const PHOTO_REPORT_SLIDES: CarouselSlide[] = (data.photoReport ?? []).slice(0, 6).map(mapCarousel);
 export const PHOTO_LEADERSHIP_SLIDES: CarouselSlide[] = PHOTO_REPORT_SLIDES;
 
 export const NOTICE_TABS: SectionTabConfig[] = [
@@ -175,13 +205,13 @@ export const VOICE_GALLERY_TABS: SectionTabConfig[] = [
   { key: 'party', label: '党群活动', moreLink: articleListLink(77, 7751) },
 ];
 
-export const VOICE_GALLERY: GalleryItem[] = (data.gallery ?? []).slice(0, 5).map(mapGallery);
+export const VOICE_GALLERY: GalleryItem[] = (data.gallery ?? []).map(mapGallery);
 
 const serviceItems = data.serviceCenter ?? [];
 export const SERVICE_CENTER_MAIN: ServiceItem[] = serviceItems.slice(0, 10).map((item, index) => ({
   id: index + 1,
   title: item.text,
-  link: item.url.startsWith('http') ? item.url : item.url.split('?')[0],
+  link: item.url.startsWith('http') ? item.url : normalizeInternalLink(item.url),
   logo: normalizeCdnUrl(item.logo),
 }));
 
@@ -190,7 +220,9 @@ export const SERVICE_CENTER_APPLY = {
   title: applyItem?.text || '申请入会',
   link: applyItem?.url?.startsWith('http')
     ? applyItem.url
-    : applyItem?.url || memberApplyLink(),
+    : applyItem?.url
+      ? normalizeInternalLink(applyItem.url)
+      : memberApplyLink(),
   logo: normalizeCdnUrl(applyItem?.logo),
 };
 
@@ -213,7 +245,6 @@ export const MEMBER_PUBLICITY_NAMES = data.memberPublicity ?? [];
 
 export const ENTERPRISE_LOGOS = (data.enterpriseLogos ?? []).map(normalizeCdnUrl);
 
-/** 时政·财经要闻列表页 */
 export const POLITICS_MORE_LINK = articleListLink(13, 84);
 
 const ALL_LIVE_ARTICLES: LiveArticle[] = [
