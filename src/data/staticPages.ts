@@ -17,7 +17,8 @@ export const STATIC_CATEGORY_DETAILS: Record<number, LiveArticleDetail> = {
     categoryName: '协会简介',
     publishTime: '2024-05-22',
     author: '中国企业财务管理协会',
-    thumb: '/assets/remote/d19460c458b4.png',
+    thumb: '/assets/remote/association-intro-7150.png',
+    imageCaption: '',
   },
   7151: {
     id: 7151,
@@ -64,7 +65,7 @@ export const STATIC_CATEGORY_DETAILS: Record<number, LiveArticleDetail> = {
     categoryName: '组织架构',
     publishTime: '2024-10-10',
     author: '中国企业财务管理协会',
-    thumb: '/assets/remote/d19460c458b4.png',
+    thumb: '/assets/remote/organization-7164.png',
     imageCaption: '',
   },
   716250: {
