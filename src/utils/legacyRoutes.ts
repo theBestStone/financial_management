@@ -6,8 +6,9 @@ export function articleListLink(parentSn: number, categorySn: number, page = 0):
   return `/article/${parentSn}_${categorySn}_${page}_0`;
 }
 
-export function articleDetailLink(id: number): string {
-  return `/article/detail/${id}`;
+export function articleDetailLink(id: number, categorySn?: number): string {
+  const source = categorySn === undefined ? '' : `?categorySn=${categorySn}`;
+  return `/article/detail/${id}${source}`;
 }
 
 export function memberApplyLink(): string {

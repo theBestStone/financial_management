@@ -1,10 +1,10 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import ContentListLayout from '../components/layout/ContentListLayout';
 import CategoryArticlePage from './CategoryArticlePage';
 import { findNavByCategorySn } from '../data/navigation';
 import { useArticleList } from '../hooks/useEfmacArticles';
-import { articleDetailLink, navigateLink } from '../utils/legacyRoutes';
+import { articleDetailLink } from '../utils/legacyRoutes';
 
 interface ArticleListPageProps {
   overrideCategorySn?: number;
@@ -22,6 +22,10 @@ function ArticleListPageContent({
   const [page, setPage] = useState(overridePage ?? 1);
   const [pageSize, setPageSize] = useState(20);
 
+  useEffect(() => {
+    setPage(overridePage ?? 1);
+  }, [categorySn, overridePage]);
+
   const { articles, total, loading } = useArticleList(categorySn, page, pageSize);
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
 
@@ -34,9 +38,9 @@ function ArticleListPageContent({
         id: article.id,
         title: article.title,
         date: article.publishTime,
-        onClick: () => navigateLink(articleDetailLink(article.id), navigate),
+        onClick: () => navigate(articleDetailLink(article.id, categorySn)),
       })),
-    [articles, navigate]
+    [articles, categorySn, navigate]
   );
 
   return (

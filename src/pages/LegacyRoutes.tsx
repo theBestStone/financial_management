@@ -22,7 +22,8 @@ export default function ArticleRouteHandler() {
     }
     const explicitDetailId = parsed.detailId;
     if (explicitDetailId && explicitDetailId !== 0) {
-      return <ArticleDetailPage overrideId={explicitDetailId} />;
+      const categorySn = resolveListCategorySn(parsed.parentSn, parsed.categorySn);
+      return <ArticleDetailPage overrideId={explicitDetailId} overrideCategorySn={categorySn} />;
     }
     const categorySn = resolveListCategorySn(parsed.parentSn, parsed.categorySn);
     return (

@@ -148,7 +148,7 @@ export async function fetchArticleList(
 ): Promise<{ list: LiveArticleListItem[]; total: number }> {
   const data = await apiGet<{ list: RawListItem[]; total: string | number }>(
     '/pcWeb/infoApp/article/list',
-    { categorySns: String(categorySn), pageNum, pageSize }
+    { categorySns: String(categorySn), page: pageNum, pageSize }
   );
   if (!data) return { list: [], total: 0 };
   return {

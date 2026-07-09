@@ -42,10 +42,10 @@ function getCachedDetailByCategory(categorySn: number): LiveArticleDetail | unde
 export function useArticleList(categorySn: number, page = 1, pageSize = 10) {
   const staticList = getStaticCategoryList(categorySn);
   const cached = staticList ?? getCachedList(categorySn);
-  const pagedCached = staticList ? staticList.slice((page - 1) * pageSize, page * pageSize) : cached;
+  const pagedCached = cached.slice((page - 1) * pageSize, page * pageSize);
   const [articles, setArticles] = useState<LiveArticleListItem[]>(pagedCached);
   const [total, setTotal] = useState(cached.length);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(cached.length === 0);
 
   useEffect(() => {
     const staticItems = getStaticCategoryList(categorySn);
@@ -56,8 +56,12 @@ export function useArticleList(categorySn: number, page = 1, pageSize = 10) {
       return;
     }
 
+    const cachedItems = getCachedList(categorySn);
+    setArticles(cachedItems.slice((page - 1) * pageSize, page * pageSize));
+    setTotal(cachedItems.length);
+
     let cancelled = false;
-    setLoading(true);
+    setLoading(cachedItems.length === 0);
     fetchArticleList(categorySn, page, pageSize)
       .then(({ list, total: t }) => {
         if (cancelled) return;

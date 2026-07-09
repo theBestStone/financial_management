@@ -1,18 +1,25 @@
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { SITE_CONFIG } from '../data/config';
 import ArticleBody from '../components/common/ArticleBody';
 import ContentPageLayout from '../components/layout/ContentPageLayout';
 import { getRelatedFromCache, useArticleDetail } from '../hooks/useEfmacArticles';
 import { articleDetailLink } from '../utils/legacyRoutes';
+import { findNavByCategorySn } from '../data/navigation';
 
 interface ArticleDetailPageProps {
   overrideId?: number;
+  overrideCategorySn?: number;
 }
 
-export default function ArticleDetailPage({ overrideId }: ArticleDetailPageProps = {}) {
+export default function ArticleDetailPage({
+  overrideId,
+  overrideCategorySn,
+}: ArticleDetailPageProps = {}) {
   const { id: idParam } = useParams();
+  const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const id = overrideId ?? Number(idParam);
+  const sourceCategorySn = overrideCategorySn ?? Number(searchParams.get('categorySn'));
   const { article, loading } = useArticleDetail(id);
 
   if (loading && !article) {
@@ -35,13 +42,16 @@ export default function ArticleDetailPage({ overrideId }: ArticleDetailPageProps
     );
   }
 
-  const related = getRelatedFromCache(article.categorySn, article.id);
+  const displayCategorySn = Number.isNaN(sourceCategorySn) ? article.categorySn : sourceCategorySn;
+  const displayCategoryName =
+    findNavByCategorySn(displayCategorySn)?.categoryName || article.categoryName;
+  const related = getRelatedFromCache(displayCategorySn, article.id);
 
   return (
     <ContentPageLayout
-      categorySn={article.categorySn}
-      categoryName={article.categoryName}
-      breadcrumbTitle={article.categoryName}
+      categorySn={displayCategorySn}
+      categoryName={displayCategoryName}
+      breadcrumbTitle={displayCategoryName}
       title={article.title}
       meta={
         <>
@@ -61,7 +71,7 @@ export default function ArticleDetailPage({ overrideId }: ArticleDetailPageProps
                 <span className="news-dot" />
                 <span
                   className="news-title"
-                  onClick={() => navigate(articleDetailLink(item.id))}
+                  onClick={() => navigate(articleDetailLink(item.id, displayCategorySn))}
                 >
                   {item.title}
                 </span>
