@@ -33,7 +33,7 @@ export default function MemberApplyPage() {
         ) : (
           <>
             <p style={{ marginBottom: 20, color: '#666', lineHeight: 1.6 }}>
-              欢迎申请成为中国企业财务管理协会会员。请如实填写以下信息，提交后协会秘书处将进行审核。
+              欢迎申请成为北京现代财务战略研究院会员。请如实填写以下信息，提交后协会秘书处将进行审核。
             </p>
             <form onSubmit={handleSubmit}>
               <div className="form-group">

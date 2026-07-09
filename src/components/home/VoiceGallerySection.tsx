@@ -8,18 +8,29 @@ import HomeSectionHeader from './HomeSectionHeader';
 export default function VoiceGallerySection() {
   const [activeTab, setActiveTab] = useState(VOICE_GALLERY_TABS[0].key);
   const [current, setCurrent] = useState(0);
+  const [sliding, setSliding] = useState(false);
   const [paused, setPaused] = useState(false);
   const navigate = useNavigate();
   const visibleCount = 5;
   const maxIndex = Math.max(VOICE_GALLERY.length - visibleCount, 0);
+  const trackItems = Array.from(
+    { length: Math.min(VOICE_GALLERY.length, visibleCount + 1) },
+    (_, index) => VOICE_GALLERY[(current + index) % VOICE_GALLERY.length],
+  );
 
   useEffect(() => {
-    if (paused || maxIndex === 0) return undefined;
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev >= maxIndex ? 0 : prev + 1));
+    if (paused || sliding || maxIndex === 0) return undefined;
+    const timer = setTimeout(() => {
+      setSliding(true);
     }, 3000);
-    return () => clearInterval(timer);
-  }, [maxIndex, paused]);
+    return () => clearTimeout(timer);
+  }, [maxIndex, paused, sliding, current]);
+
+  const handleTrackTransitionEnd = () => {
+    if (!sliding) return;
+    setCurrent((prev) => (prev >= maxIndex ? 0 : prev + 1));
+    setSliding(false);
+  };
 
   return (
     <div className="home-panel voice-gallery-panel">
@@ -36,12 +47,12 @@ export default function VoiceGallerySection() {
       >
         <div className="voice-gallery-viewport">
           <div
-            className="voice-gallery-track"
-            style={{ transform: `translateX(calc(-${current} * var(--voice-card-step)))` }}
+            className={`voice-gallery-track ${sliding ? 'is-sliding' : ''}`}
+            onTransitionEnd={handleTrackTransitionEnd}
           >
-            {VOICE_GALLERY.map((item) => (
+            {trackItems.map((item, index) => (
               <div
-                key={item.id}
+                key={`${item.id}-${index}`}
                 className="voice-gallery-item"
                 onClick={() => navigateLink(item.link, navigate)}
               >

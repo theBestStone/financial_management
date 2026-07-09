@@ -1,7 +1,7 @@
 import { EFMAC_ASSETS } from './officialAssets';
 
 export const SITE_CONFIG = {
-  name: '中国企业财务管理协会',
+  name: '北京现代财务战略研究院',
   shortName: '中财协',
   logo: EFMAC_ASSETS.logo,
   headerBg: EFMAC_ASSETS.headerBg,
